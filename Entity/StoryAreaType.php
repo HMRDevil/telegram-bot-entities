@@ -1,0 +1,17 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Phppride\TelegramBot\Entity;
+
+/**
+ * Describes the type of a clickable area on a story. Currently, it can be one of
+ * - StoryAreaTypeLocation
+ * - StoryAreaTypeSuggestedReaction
+ * - StoryAreaTypeLink
+ * - StoryAreaTypeWeather
+ * - StoryAreaTypeUniqueGift
+ * 
+ * @see https://core.telegram.org/bots/api#storyareatype
+ */
+interface StoryAreaType {}
