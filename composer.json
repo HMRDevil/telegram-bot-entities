@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Phppride\\TelegramBot\\Entity\\": ""
+            "Phppride\\TelegramBot\\": ""
         }
     },
     "autoload-dev": {
