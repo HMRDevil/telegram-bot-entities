@@ -18,6 +18,7 @@ final class ChatJoinRequest
      * @param int $date Date the request was sent in Unix time
      * @param string|null $bio Optional. Bio of the user
      * @param ChatInviteLink|null $inviteLink Optional. Chat invite link that was used by the user to send the join request
+     * @param string|null $queryId Optional. Identifier of the join request query; for bots assigned to process join request only. If present, then the bot must call sendChatJoinRequestWebApp or directly call answerChatJoinRequestQuery within 10 seconds.
     */
     public function __construct
     (
@@ -26,7 +27,8 @@ final class ChatJoinRequest
          private int $userChatId,
          private int $date,
          private ?string $bio = null,
-         private ?ChatInviteLink $inviteLink = null
+         private ?ChatInviteLink $inviteLink = null,
+         private ?string $queryId = null
     ) {}
     
     /**
@@ -75,5 +77,13 @@ final class ChatJoinRequest
     public function getInviteLink(): ?ChatInviteLink
     {
         return $this->inviteLink;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getQueryId(): ?string
+    {
+        return $this->queryId;
     }
 }
