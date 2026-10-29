@@ -63,6 +63,7 @@ final class ChatFullInfo
      * @param Audio|null $firstProfileAudio Optional. For private chats, the first audio added to the profile of the user
      * @param UniqueGiftColors|null $uniqueGiftColors Optional. The color scheme based on a unique gift that must be used for the chat's name, message replies and link previews
      * @param int|null $paidMessageStarCount Optional. The number of Telegram Stars a general user has to pay to send a message to the chat
+     * @param User|null $guardBot Optional. The bot that processes join request queries in the chat. The field is only available to chat administrators.
     */
     public function __construct
     (
@@ -116,7 +117,8 @@ final class ChatFullInfo
          private ?UserRating $rating = null,
          private ?Audio $firstProfileAudio = null,
          private ?UniqueGiftColors $uniqueGiftColors = null,
-         private ?int $paidMessageStarCount = null
+         private ?int $paidMessageStarCount = null,
+         private ?User $guardBot = null
     ) {}
     
     /**
@@ -525,5 +527,13 @@ final class ChatFullInfo
     public function getPaidMessageStarCount(): ?int
     {
         return $this->paidMessageStarCount;
+    }
+
+    /**
+     * @return User|null
+     */
+    public function getGuardBot(): ?User
+    {
+        return $this->guardBot;
     }
 }
