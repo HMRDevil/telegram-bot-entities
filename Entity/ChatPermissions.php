@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class ChatPermissions
 {
     /**
-     * @param bool|null $canSendMessages Optional. True, if the user is allowed to send text messages, contacts, giveaways, giveaway winners, invoices, locations and venues
+     * @param bool|null $canSendMessages Optional. True, if the user is allowed to send text messages, rich messages, contacts, giveaways, giveaway winners, invoices, locations and venues
      * @param bool|null $canSendAudios Optional. True, if the user is allowed to send audios
      * @param bool|null $canSendDocuments Optional. True, if the user is allowed to send documents
      * @param bool|null $canSendPhotos Optional. True, if the user is allowed to send photos
