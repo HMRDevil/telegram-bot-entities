@@ -7,6 +7,7 @@ namespace Phppride\TelegramBot\Entity;
 /**
  * This object represents the content of a poll option to be sent. It should be one of
  * - InputMediaAnimation
+ * - InputMediaLink
  * - InputMediaLivePhoto
  * - InputMediaLocation
  * - InputMediaPhoto
