@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class InputMediaVenue
 {
     /**
-     * @param string $type Type of the result, must be venue
+     * @param string $type Type of the media, must be venue
      * @param float $latitude Latitude of the location
      * @param float $longitude Longitude of the location
      * @param string $title Name of the venue

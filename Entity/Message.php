@@ -48,6 +48,7 @@ final class Message
      * @param LinkPreviewOptions|null $linkPreviewOptions Optional. Options used for link preview generation for the message, if it is a text message and link preview options were changed
      * @param SuggestedPostInfo|null $suggestedPostInfo Optional. Information about suggested post parameters if the message is a suggested post in a channel direct messages chat. If the message is an approved or declined suggested post, then it can't be edited.
      * @param string|null $effectId Optional. Unique identifier of the message effect added to the message
+     * @param RichMessage|null $richMessage Optional. Message is a rich formatted message
      * @param Animation|null $animation Optional. Message is an animation, information about the animation. For backward compatibility, when this field is set, the document field will also be set.
      * @param Audio|null $audio Optional. Message is an audio file, information about the file
      * @param Document|null $document Optional. Message is a general file, information about the file
@@ -165,6 +166,7 @@ final class Message
          private ?LinkPreviewOptions $linkPreviewOptions = null,
          private ?SuggestedPostInfo $suggestedPostInfo = null,
          private ?string $effectId = null,
+         private ?RichMessage $richMessage = null,
          private ?Animation $animation = null,
          private ?Audio $audio = null,
          private ?Document $document = null,
@@ -531,6 +533,14 @@ final class Message
     public function getEffectId(): ?string
     {
         return $this->effectId;
+    }
+
+    /**
+     * @return RichMessage|null
+     */
+    public function getRichMessage(): ?RichMessage
+    {
+        return $this->richMessage;
     }
 
     /**
