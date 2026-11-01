@@ -13,10 +13,12 @@ final class InlineKeyboardMarkup
 {
     /**
      * @param InlineKeyboardButton[][] $inlineKeyboard Array of button rows, each represented by an Array of InlineKeyboardButton objects
+     * @param bool|null $forceReply Optional. Pass True if the reply interface must be shown to the user, as if they had manually selected the bot's message and tapped 'Reply'. The value of the field can't be changed when the inline keyboard is edited.
     */
     public function __construct
     (
-         private array $inlineKeyboard
+         private array $inlineKeyboard,
+         private ?bool $forceReply = null
     ) {}
     
     /**
@@ -25,5 +27,13 @@ final class InlineKeyboardMarkup
     public function getInlineKeyboard(): array
     {
         return $this->inlineKeyboard;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getForceReply(): ?bool
+    {
+        return $this->forceReply;
     }
 }
