@@ -64,6 +64,7 @@ final class ChatFullInfo
      * @param UniqueGiftColors|null $uniqueGiftColors Optional. The color scheme based on a unique gift that must be used for the chat's name, message replies and link previews
      * @param int|null $paidMessageStarCount Optional. The number of Telegram Stars a general user has to pay to send a message to the chat
      * @param User|null $guardBot Optional. The bot that processes join request queries in the chat. The field is only available to chat administrators.
+     * @param Community|null $community Optional. The Community to which the chat belongs
     */
     public function __construct
     (
@@ -118,7 +119,8 @@ final class ChatFullInfo
          private ?Audio $firstProfileAudio = null,
          private ?UniqueGiftColors $uniqueGiftColors = null,
          private ?int $paidMessageStarCount = null,
-         private ?User $guardBot = null
+         private ?User $guardBot = null,
+         private ?Community $community = null
     ) {}
     
     /**
@@ -535,5 +537,13 @@ final class ChatFullInfo
     public function getGuardBot(): ?User
     {
         return $this->guardBot;
+    }
+
+    /**
+     * @return Community|null
+     */
+    public function getCommunity(): ?Community
+    {
+        return $this->community;
     }
 }
