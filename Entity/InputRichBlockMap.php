@@ -14,18 +14,18 @@ final class InputRichBlockMap
     /**
      * @param string $type Type of the block, always "map"
      * @param Location $location Location of the center of the map
-     * @param int $zoom Map zoom level; 0-24
-     * @param int $width Map width; 0-10000
-     * @param int $height Map height; 0-10000
+     * @param int|null $zoom Optional. Map zoom level; 0-24
+     * @param int|null $width Optional. Map width; 0-10000
+     * @param int|null $height Optional. Map height; 0-10000
      * @param RichBlockCaption|null $caption Optional. Caption of the block
     */
     public function __construct
     (
          private string $type,
          private Location $location,
-         private int $zoom,
-         private int $width,
-         private int $height,
+         private ?int $zoom = null,
+         private ?int $width = null,
+         private ?int $height = null,
          private ?RichBlockCaption $caption = null
     ) {}
     
@@ -46,25 +46,25 @@ final class InputRichBlockMap
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getZoom(): int
+    public function getZoom(): ?int
     {
         return $this->zoom;
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getWidth(): int
+    public function getWidth(): ?int
     {
         return $this->width;
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getHeight(): int
+    public function getHeight(): ?int
     {
         return $this->height;
     }

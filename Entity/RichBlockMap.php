@@ -14,7 +14,7 @@ final class RichBlockMap
     /**
      * @param string $type Type of the block, always "map"
      * @param Location $location Location of the center of the map
-     * @param int $zoom Map zoom level; 13-20
+     * @param int $zoom Map zoom level
      * @param int $width Expected width of the map
      * @param int $height Expected height of the map
      * @param RichBlockCaption|null $caption Optional. Caption of the block
