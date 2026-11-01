@@ -16,6 +16,7 @@ final class InputRichBlockTable
      * @param RichBlockTableCell[][] $cells Cells of the table
      * @param bool|null $isBordered Optional. Pass True if the table has borders
      * @param bool|null $isStriped Optional. Pass True if the table is striped
+     * @param bool|null $isCompact Optional. Pass True if table cells must have smaller indents
      * @param RichText|null $caption Optional. Caption of the table
     */
     public function __construct
@@ -24,6 +25,7 @@ final class InputRichBlockTable
          private array $cells,
          private ?bool $isBordered = null,
          private ?bool $isStriped = null,
+         private ?bool $isCompact = null,
          private ?RichText $caption = null
     ) {}
     
@@ -57,6 +59,14 @@ final class InputRichBlockTable
     public function getIsStriped(): ?bool
     {
         return $this->isStriped;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getIsCompact(): ?bool
+    {
+        return $this->isCompact;
     }
 
     /**
