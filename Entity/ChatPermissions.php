@@ -27,7 +27,7 @@ final class ChatPermissions
      * @param bool|null $canChangeInfo Optional. True, if the user is allowed to change the chat title, photo and other settings. Ignored in public supergroups.
      * @param bool|null $canInviteUsers Optional. True, if the user is allowed to invite new users to the chat
      * @param bool|null $canPinMessages Optional. True, if the user is allowed to pin messages. Ignored in public supergroups.
-     * @param bool|null $canManageTopics Optional. True, if the user is allowed to create forum topics. If omitted defaults to the value of can_pin_messages.
+     * @param bool|null $canManageTopics Optional. True, if the user is allowed to create forum topics. If omitted, defaults to the value of can_pin_messages.
     */
     public function __construct
     (
