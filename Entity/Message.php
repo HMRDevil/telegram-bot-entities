@@ -103,8 +103,9 @@ final class Message
      * @param ChatBackground|null $chatBackgroundSet Optional. Service message: chat background set
      * @param ChecklistTasksDone|null $checklistTasksDone Optional. Service message: some tasks in a checklist were marked as done or not done
      * @param ChecklistTasksAdded|null $checklistTasksAdded Optional. Service message: tasks were added to a checklist
-     * @param CommunityChatAdded|null $communityChatAdded Optional. Service message: chat added to a Community
-     * @param CommunityChatRemoved|null $communityChatRemoved Optional. Service message: chat removed from a Community
+     * @param CommunityChatAdded|null $communityChatAdded Optional. Service message: chat or bot added to a Community
+     * @param CommunityChatJoined|null $communityChatJoined Optional. Service message: chat was joined by a user from a Community
+     * @param CommunityChatRemoved|null $communityChatRemoved Optional. Service message: chat or bot removed from a Community
      * @param DirectMessagePriceChanged|null $directMessagePriceChanged Optional. Service message: the price for paid messages in the corresponding direct messages chat of a channel has changed
      * @param ForumTopicCreated|null $forumTopicCreated Optional. Service message: forum topic created
      * @param ForumTopicEdited|null $forumTopicEdited Optional. Service message: forum topic edited
@@ -226,6 +227,7 @@ final class Message
          private ?ChecklistTasksDone $checklistTasksDone = null,
          private ?ChecklistTasksAdded $checklistTasksAdded = null,
          private ?CommunityChatAdded $communityChatAdded = null,
+         private ?CommunityChatJoined $communityChatJoined = null,
          private ?CommunityChatRemoved $communityChatRemoved = null,
          private ?DirectMessagePriceChanged $directMessagePriceChanged = null,
          private ?ForumTopicCreated $forumTopicCreated = null,
@@ -989,6 +991,14 @@ final class Message
     public function getCommunityChatAdded(): ?CommunityChatAdded
     {
         return $this->communityChatAdded;
+    }
+
+    /**
+     * @return CommunityChatJoined|null
+     */
+    public function getCommunityChatJoined(): ?CommunityChatJoined
+    {
+        return $this->communityChatJoined;
     }
 
     /**
