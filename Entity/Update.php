@@ -39,6 +39,7 @@ final class Update
      * @param ChatBoostUpdated|null $chatBoost Optional. A chat boost was added or changed. The bot must be an administrator in the chat to receive these updates.
      * @param ChatBoostRemoved|null $removedChatBoost Optional. A boost was removed from a chat. The bot must be an administrator in the chat to receive these updates.
      * @param ManagedBotUpdated|null $managedBot Optional. A new bot was created to be managed by the bot, or token or owner of a managed bot was changed
+     * @param BotSubscriptionUpdated|null $subscription Optional. User payment subscription has changed
     */
     public function __construct
     (
@@ -67,7 +68,8 @@ final class Update
          private ?ChatJoinRequest $chatJoinRequest = null,
          private ?ChatBoostUpdated $chatBoost = null,
          private ?ChatBoostRemoved $removedChatBoost = null,
-         private ?ManagedBotUpdated $managedBot = null
+         private ?ManagedBotUpdated $managedBot = null,
+         private ?BotSubscriptionUpdated $subscription = null
     ) {}
     
     /**
@@ -276,5 +278,13 @@ final class Update
     public function getManagedBot(): ?ManagedBotUpdated
     {
         return $this->managedBot;
+    }
+
+    /**
+     * @return BotSubscriptionUpdated|null
+     */
+    public function getSubscription(): ?BotSubscriptionUpdated
+    {
+        return $this->subscription;
     }
 }

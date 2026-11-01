@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class Message
 {
     /**
-     * @param int $messageId Unique message identifier inside this chat. In specific instances (e.g., message containing a video sent to a big chat), the server might automatically schedule a message instead of sending it immediately. In such cases, this field will be 0 and the relevant message will be unusable until it is actually sent.
+     * @param int $messageId Unique message identifier inside this chat; 0 for ephemeral messages. In specific instances (e.g., a message containing a video sent to a big chat), the server might automatically schedule a message instead of sending it immediately. In such cases, this field will be 0 and the relevant message will be unusable until it is actually sent.
      * @param int $date Date the message was sent in Unix time. It is always a positive number, representing a valid date.
      * @param Chat $chat Chat the message belongs to
      * @param int|null $messageThreadId Optional. Unique identifier of a message thread or forum topic to which the message belongs; for supergroups and private chats only
@@ -22,12 +22,14 @@ final class Message
      * @param int|null $senderBoostCount Optional. If the sender of the message boosted the chat, the number of boosts added by the user
      * @param User|null $senderBusinessBot Optional. The bot that actually sent the message on behalf of the business account. Available only for outgoing messages sent on behalf of the connected business account.
      * @param string|null $senderTag Optional. Tag or custom title of the sender of the message; for supergroups only
+     * @param User|null $receiverUser Optional. For ephemeral messages, the user who received the message
+     * @param int|null $ephemeralMessageId Optional. For ephemeral messages, identifier of the ephemeral message inside this chat. The identifier may be reused for another ephemeral message after the message is deleted or expires.
      * @param string|null $guestQueryId Optional. The unique identifier for the guest query. Use this identifier with the method answerGuestQuery to send a response message. If non-empty, the message belongs to the chat where the guest bot was summoned, which may not coincide with other existing bot chats sharing the same identifier.
      * @param string|null $businessConnectionId Optional. Unique identifier of the business connection from which the message was received. If non-empty, the message belongs to a chat of the corresponding business account that is independent from any potential bot chat which might share the same identifier.
      * @param MessageOrigin|null $forwardOrigin Optional. Information about the original message for forwarded messages
      * @param bool|null $isTopicMessage Optional. True, if the message is sent to a topic in a forum supergroup or a private chat with the bot
      * @param bool|null $isAutomaticForward Optional. True, if the message is a channel post that was automatically forwarded to the connected discussion group
-     * @param Message|null $replyToMessage Optional. For replies in the same chat and message thread, the original message. Note that the Message object in this field will not contain further reply_to_message fields even if it itself is a reply.
+     * @param Message|null $replyToMessage Optional. For replies in the same chat and message thread, the original message. Note that the Message object in this field will not contain further reply_to_message fields even if it itself is a reply. If the message is a reply to an ephemeral message, then this field may be omitted.
      * @param ExternalReplyInfo|null $externalReply Optional. Information about the message that is being replied to, which may come from another chat or forum topic
      * @param TextQuote|null $quote Optional. For replies that quote part of the original message, the quoted part of the message
      * @param Story|null $replyToStory Optional. For replies to a story, the original story
@@ -96,11 +98,13 @@ final class Message
      * @param string|null $connectedWebsite Optional. The domain name of the website on which the user has logged in. More about Telegram Login: https://core.telegram.org/widgets/login
      * @param WriteAccessAllowed|null $writeAccessAllowed Optional. Service message: the user allowed the bot to write messages after adding it to the attachment or side menu, launching a Web App from a link, or accepting an explicit request from a Web App sent by the method requestWriteAccess
      * @param PassportData|null $passportData Optional. Telegram Passport data
-     * @param ProximityAlertTriggered|null $proximityAlertTriggered Optional. Service message. A user in the chat triggered another user's proximity alert while sharing Live Location.
+     * @param ProximityAlertTriggered|null $proximityAlertTriggered Optional. Service message: a user in the chat triggered another user's proximity alert while sharing Live Location
      * @param ChatBoostAdded|null $boostAdded Optional. Service message: user boosted the chat
      * @param ChatBackground|null $chatBackgroundSet Optional. Service message: chat background set
      * @param ChecklistTasksDone|null $checklistTasksDone Optional. Service message: some tasks in a checklist were marked as done or not done
      * @param ChecklistTasksAdded|null $checklistTasksAdded Optional. Service message: tasks were added to a checklist
+     * @param CommunityChatAdded|null $communityChatAdded Optional. Service message: chat added to a Community
+     * @param CommunityChatRemoved|null $communityChatRemoved Optional. Service message: chat removed from a Community
      * @param DirectMessagePriceChanged|null $directMessagePriceChanged Optional. Service message: the price for paid messages in the corresponding direct messages chat of a channel has changed
      * @param ForumTopicCreated|null $forumTopicCreated Optional. Service message: forum topic created
      * @param ForumTopicEdited|null $forumTopicEdited Optional. Service message: forum topic edited
@@ -140,6 +144,8 @@ final class Message
          private ?int $senderBoostCount = null,
          private ?User $senderBusinessBot = null,
          private ?string $senderTag = null,
+         private ?User $receiverUser = null,
+         private ?int $ephemeralMessageId = null,
          private ?string $guestQueryId = null,
          private ?string $businessConnectionId = null,
          private ?MessageOrigin $forwardOrigin = null,
@@ -219,6 +225,8 @@ final class Message
          private ?ChatBackground $chatBackgroundSet = null,
          private ?ChecklistTasksDone $checklistTasksDone = null,
          private ?ChecklistTasksAdded $checklistTasksAdded = null,
+         private ?CommunityChatAdded $communityChatAdded = null,
+         private ?CommunityChatRemoved $communityChatRemoved = null,
          private ?DirectMessagePriceChanged $directMessagePriceChanged = null,
          private ?ForumTopicCreated $forumTopicCreated = null,
          private ?ForumTopicEdited $forumTopicEdited = null,
@@ -325,6 +333,22 @@ final class Message
     public function getSenderTag(): ?string
     {
         return $this->senderTag;
+    }
+
+    /**
+     * @return User|null
+     */
+    public function getReceiverUser(): ?User
+    {
+        return $this->receiverUser;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getEphemeralMessageId(): ?int
+    {
+        return $this->ephemeralMessageId;
     }
 
     /**
@@ -957,6 +981,22 @@ final class Message
     public function getChecklistTasksAdded(): ?ChecklistTasksAdded
     {
         return $this->checklistTasksAdded;
+    }
+
+    /**
+     * @return CommunityChatAdded|null
+     */
+    public function getCommunityChatAdded(): ?CommunityChatAdded
+    {
+        return $this->communityChatAdded;
+    }
+
+    /**
+     * @return CommunityChatRemoved|null
+     */
+    public function getCommunityChatRemoved(): ?CommunityChatRemoved
+    {
+        return $this->communityChatRemoved;
     }
 
     /**
