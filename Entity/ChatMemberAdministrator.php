@@ -26,12 +26,13 @@ final class ChatMemberAdministrator
      * @param bool $canPostStories True, if the administrator can post stories to the chat
      * @param bool $canEditStories True, if the administrator can edit stories posted by other users, post stories to the chat page, pin chat stories, and access the chat's story archive
      * @param bool $canDeleteStories True, if the administrator can delete stories posted by other users
+     * @param bool $canSendWelcomeMessages True, if the administrator can manage chat welcome messages or directly send them in the case of bots
      * @param bool|null $canPostMessages Optional. True, if the administrator can post messages in the channel, approve suggested posts, or access channel statistics; for channels only
      * @param bool|null $canEditMessages Optional. True, if the administrator can edit messages of other users and can pin messages; for channels only
      * @param bool|null $canPinMessages Optional. True, if the user is allowed to pin messages; for groups and supergroups only
      * @param bool|null $canManageTopics Optional. True, if the user is allowed to create, rename, close, and reopen forum topics; for supergroups only
      * @param bool|null $canManageDirectMessages Optional. True, if the administrator can manage direct messages of the channel and decline suggested posts; for channels only
-     * @param bool|null $canManageTags Optional. True, if the administrator can edit the tags of regular members; for groups and supergroups only. If omitted, defaults to the value of can_pin_messages.
+     * @param bool|null $canManageTags Optional. True, if the administrator can edit the tags of regular members; for groups and supergroups only
      * @param string|null $customTitle Optional. Custom title for this user
     */
     public function __construct
@@ -50,6 +51,7 @@ final class ChatMemberAdministrator
          private bool $canPostStories,
          private bool $canEditStories,
          private bool $canDeleteStories,
+         private bool $canSendWelcomeMessages,
          private ?bool $canPostMessages = null,
          private ?bool $canEditMessages = null,
          private ?bool $canPinMessages = null,
@@ -169,6 +171,14 @@ final class ChatMemberAdministrator
     public function getCanDeleteStories(): bool
     {
         return $this->canDeleteStories;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getCanSendWelcomeMessages(): bool
+    {
+        return $this->canSendWelcomeMessages;
     }
 
     /**

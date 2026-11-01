@@ -40,6 +40,7 @@ final class Update
      * @param ChatBoostRemoved|null $removedChatBoost Optional. A boost was removed from a chat. The bot must be an administrator in the chat to receive these updates.
      * @param ManagedBotUpdated|null $managedBot Optional. A new bot was created to be managed by the bot, or token or owner of a managed bot was changed
      * @param BotSubscriptionUpdated|null $subscription Optional. User payment subscription has changed
+     * @param MessageGenerationStopped|null $stoppedMessageGeneration Optional. A user asked the bot to stop the generation of a message
     */
     public function __construct
     (
@@ -69,7 +70,8 @@ final class Update
          private ?ChatBoostUpdated $chatBoost = null,
          private ?ChatBoostRemoved $removedChatBoost = null,
          private ?ManagedBotUpdated $managedBot = null,
-         private ?BotSubscriptionUpdated $subscription = null
+         private ?BotSubscriptionUpdated $subscription = null,
+         private ?MessageGenerationStopped $stoppedMessageGeneration = null
     ) {}
     
     /**
@@ -286,5 +288,13 @@ final class Update
     public function getSubscription(): ?BotSubscriptionUpdated
     {
         return $this->subscription;
+    }
+
+    /**
+     * @return MessageGenerationStopped|null
+     */
+    public function getStoppedMessageGeneration(): ?MessageGenerationStopped
+    {
+        return $this->stoppedMessageGeneration;
     }
 }

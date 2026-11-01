@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichMessageContent
 {
     /**
-     * @param InputRichMessage $richMessage The message to be sent
+     * @param InputRichMessage $richMessage The message to be sent. Only previously uploaded files may be used in the message.
     */
     public function __construct
     (

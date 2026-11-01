@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Phppride\TelegramBot\Entity;
 
 /**
- * This object represents a video message (available in Telegram apps as of v.4.0).
+ * This object represents a video message.
  *
  * @see https://core.telegram.org/bots/api#videonote
  */

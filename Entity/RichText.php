@@ -27,6 +27,7 @@ namespace Phppride\TelegramBot\Entity;
  * - RichTextHashtag
  * - RichTextCashtag
  * - RichTextBotCommand
+ * - RichTextButton
  * - RichTextAnchor
  * - RichTextAnchorLink
  * - RichTextReference
