@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockMathematicalExpression
 {
     /**
-     * @param string $type Type of the block, always "mathematical_expression"
+     * @param string $type Type of the block, always “mathematical_expression”
      * @param string $expression The mathematical expression in LaTeX format
     */
     public function __construct

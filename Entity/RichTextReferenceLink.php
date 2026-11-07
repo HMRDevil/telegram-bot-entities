@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextReferenceLink
 {
     /**
-     * @param string $type Type of the rich text, always "reference_link"
+     * @param string $type Type of the rich text, always “reference_link”
      * @param RichText $text The link text
      * @param string $referenceName The name of the reference
     */

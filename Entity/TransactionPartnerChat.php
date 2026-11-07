@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class TransactionPartnerChat
 {
     /**
-     * @param string $type Type of the transaction partner, always "chat"
+     * @param string $type Type of the transaction partner, always “chat”
      * @param Chat $chat Information about the chat
      * @param Gift|null $gift Optional. The gift sent to the chat by the bot
     */

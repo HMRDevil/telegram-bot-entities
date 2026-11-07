@@ -17,7 +17,7 @@ final class InputVenueMessageContent
      * @param string $title Name of the venue
      * @param string $address Address of the venue
      * @param string|null $foursquareId Optional. Foursquare identifier of the venue, if known
-     * @param string|null $foursquareType Optional. Foursquare type of the venue, if known. (For example, "arts_entertainment/default", "arts_entertainment/aquarium" or "food/icecream".)
+     * @param string|null $foursquareType Optional. Foursquare type of the venue, if known. (For example, “arts_entertainment/default”, “arts_entertainment/aquarium” or “food/icecream”.)
      * @param string|null $googlePlaceId Optional. Google Places identifier of the venue
      * @param string|null $googlePlaceType Optional. Google Places type of the venue. (See supported types.)
     */

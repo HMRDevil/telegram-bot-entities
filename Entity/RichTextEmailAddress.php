@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextEmailAddress
 {
     /**
-     * @param string $type Type of the rich text, always "email_address"
+     * @param string $type Type of the rich text, always “email_address”
      * @param RichText $text The text
      * @param string $emailAddress The email address
     */

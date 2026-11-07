@@ -13,7 +13,7 @@ final class ChatFullInfo
 {
     /**
      * @param int $id Unique identifier for this chat. This number may have more than 32 significant bits and some programming languages may have difficulty/silent defects in interpreting it. But it has at most 52 significant bits, so a signed 64-bit integer or double-precision float type are safe for storing this identifier.
-     * @param string $type Type of the chat, can be either "private", "group", "supergroup" or "channel"
+     * @param string $type Type of the chat, can be either “private”, “group”, “supergroup” or “channel”
      * @param int $accentColorId Identifier of the accent color for the chat name and backgrounds of the chat photo, reply header, and link preview. See accent colors for more details.
      * @param int $maxReactionCount The maximum number of reactions that can be set on a message in the chat
      * @param AcceptedGiftTypes $acceptedGiftTypes Information about types of gifts that are accepted by the chat or by the corresponding user for private chats
@@ -21,8 +21,8 @@ final class ChatFullInfo
      * @param string|null $username Optional. Username, for private chats, supergroups and channels if available
      * @param string|null $firstName Optional. First name of the other party in a private chat
      * @param string|null $lastName Optional. Last name of the other party in a private chat
-     * @param bool|null $isForum Optional. True, if the supergroup chat is a forum (has topics enabled)
-     * @param bool|null $isDirectMessages Optional. True, if the chat is the direct messages chat of a channel
+     * @param true|null $isForum Optional. True, if the supergroup chat is a forum (has topics enabled)
+     * @param true|null $isDirectMessages Optional. True, if the chat is the direct messages chat of a channel
      * @param ChatPhoto|null $photo Optional. Chat photo
      * @param String[]|null $activeUsernames Optional. If non-empty, the list of all active chat usernames; for private chats, supergroups and channels
      * @param Birthdate|null $birthdate Optional. For private chats, the date of birth of the user
@@ -38,24 +38,24 @@ final class ChatFullInfo
      * @param string|null $emojiStatusCustomEmojiId Optional. Custom emoji identifier of the emoji status of the chat or the other party in a private chat
      * @param int|null $emojiStatusExpirationDate Optional. Expiration date of the emoji status of the chat or the other party in a private chat, in Unix time, if any
      * @param string|null $bio Optional. Bio of the other party in a private chat
-     * @param bool|null $hasPrivateForwards Optional. True, if privacy settings of the other party in the private chat allows to use tg://user?id=<user_id> links only in chats with the user
-     * @param bool|null $hasRestrictedVoiceAndVideoMessages Optional. True, if the privacy settings of the other party restrict sending voice and video note messages in the private chat
-     * @param bool|null $joinToSendMessages Optional. True, if users need to join the supergroup before they can send messages
-     * @param bool|null $joinByRequest Optional. True, if all users directly joining the supergroup without using an invite link need to be approved by supergroup administrators
+     * @param true|null $hasPrivateForwards Optional. True, if privacy settings of the other party in the private chat allows to use tg://user?id=<user_id> links only in chats with the user
+     * @param true|null $hasRestrictedVoiceAndVideoMessages Optional. True, if the privacy settings of the other party restrict sending voice and video note messages in the private chat
+     * @param true|null $joinToSendMessages Optional. True, if users need to join the supergroup before they can send messages
+     * @param true|null $joinByRequest Optional. True, if all users directly joining the supergroup without using an invite link need to be approved by supergroup administrators
      * @param string|null $description Optional. Description, for groups, supergroups and channel chats
      * @param string|null $inviteLink Optional. Primary invite link, for groups, supergroups and channel chats
      * @param Message|null $pinnedMessage Optional. The most recent pinned message (by sending date)
      * @param ChatPermissions|null $permissions Optional. Default chat member permissions, for groups and supergroups
-     * @param bool|null $canSendPaidMedia Optional. True, if paid media messages can be sent or forwarded to the channel chat. The field is available only for channel chats.
+     * @param true|null $canSendPaidMedia Optional. True, if paid media messages can be sent or forwarded to the channel chat. The field is available only for channel chats.
      * @param int|null $slowModeDelay Optional. For supergroups, the minimum allowed delay between consecutive messages sent by each unprivileged user; in seconds
      * @param int|null $unrestrictBoostCount Optional. For supergroups, the minimum number of boosts that a non-administrator user needs to add in order to ignore slow mode and chat permissions
      * @param int|null $messageAutoDeleteTime Optional. The time after which all messages sent to the chat will be automatically deleted; in seconds
-     * @param bool|null $hasAggressiveAntiSpamEnabled Optional. True, if aggressive anti-spam checks are enabled in the supergroup. The field is only available to chat administrators.
-     * @param bool|null $hasHiddenMembers Optional. True, if non-administrators can only get the list of bots and administrators in the chat
-     * @param bool|null $hasProtectedContent Optional. True, if messages from the chat can't be forwarded to other chats
-     * @param bool|null $hasVisibleHistory Optional. True, if new chat members will have access to old messages; available only to chat administrators
+     * @param true|null $hasAggressiveAntiSpamEnabled Optional. True, if aggressive anti-spam checks are enabled in the supergroup. The field is only available to chat administrators.
+     * @param true|null $hasHiddenMembers Optional. True, if non-administrators can only get the list of bots and administrators in the chat
+     * @param true|null $hasProtectedContent Optional. True, if messages from the chat can't be forwarded to other chats
+     * @param true|null $hasVisibleHistory Optional. True, if new chat members will have access to old messages; available only to chat administrators
      * @param string|null $stickerSetName Optional. For supergroups, name of the group sticker set
-     * @param bool|null $canSetStickerSet Optional. True, if the bot can change the group sticker set
+     * @param true|null $canSetStickerSet Optional. True, if the bot can change the group sticker set
      * @param string|null $customEmojiStickerSetName Optional. For supergroups, the name of the group's custom emoji sticker set. Custom emoji from this set can be used by all users and bots in the group.
      * @param int|null $linkedChatId Optional. Unique identifier for the linked chat, i.e. the discussion group identifier for a channel and vice versa; for supergroups and channel chats. This identifier may be greater than 32 bits and some programming languages may have difficulty/silent defects in interpreting it. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision float type are safe for storing this identifier.
      * @param ChatLocation|null $location Optional. For supergroups, the location to which the supergroup is connected
@@ -77,8 +77,8 @@ final class ChatFullInfo
          private ?string $username = null,
          private ?string $firstName = null,
          private ?string $lastName = null,
-         private ?bool $isForum = null,
-         private ?bool $isDirectMessages = null,
+         private ?true $isForum = null,
+         private ?true $isDirectMessages = null,
          private ?ChatPhoto $photo = null,
          private ?array $activeUsernames = null,
          private ?Birthdate $birthdate = null,
@@ -94,24 +94,24 @@ final class ChatFullInfo
          private ?string $emojiStatusCustomEmojiId = null,
          private ?int $emojiStatusExpirationDate = null,
          private ?string $bio = null,
-         private ?bool $hasPrivateForwards = null,
-         private ?bool $hasRestrictedVoiceAndVideoMessages = null,
-         private ?bool $joinToSendMessages = null,
-         private ?bool $joinByRequest = null,
+         private ?true $hasPrivateForwards = null,
+         private ?true $hasRestrictedVoiceAndVideoMessages = null,
+         private ?true $joinToSendMessages = null,
+         private ?true $joinByRequest = null,
          private ?string $description = null,
          private ?string $inviteLink = null,
          private ?Message $pinnedMessage = null,
          private ?ChatPermissions $permissions = null,
-         private ?bool $canSendPaidMedia = null,
+         private ?true $canSendPaidMedia = null,
          private ?int $slowModeDelay = null,
          private ?int $unrestrictBoostCount = null,
          private ?int $messageAutoDeleteTime = null,
-         private ?bool $hasAggressiveAntiSpamEnabled = null,
-         private ?bool $hasHiddenMembers = null,
-         private ?bool $hasProtectedContent = null,
-         private ?bool $hasVisibleHistory = null,
+         private ?true $hasAggressiveAntiSpamEnabled = null,
+         private ?true $hasHiddenMembers = null,
+         private ?true $hasProtectedContent = null,
+         private ?true $hasVisibleHistory = null,
          private ?string $stickerSetName = null,
-         private ?bool $canSetStickerSet = null,
+         private ?true $canSetStickerSet = null,
          private ?string $customEmojiStickerSetName = null,
          private ?int $linkedChatId = null,
          private ?ChatLocation $location = null,
@@ -196,17 +196,17 @@ final class ChatFullInfo
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsForum(): ?bool
+    public function getIsForum(): ?true
     {
         return $this->isForum;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsDirectMessages(): ?bool
+    public function getIsDirectMessages(): ?true
     {
         return $this->isDirectMessages;
     }
@@ -332,33 +332,33 @@ final class ChatFullInfo
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getHasPrivateForwards(): ?bool
+    public function getHasPrivateForwards(): ?true
     {
         return $this->hasPrivateForwards;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getHasRestrictedVoiceAndVideoMessages(): ?bool
+    public function getHasRestrictedVoiceAndVideoMessages(): ?true
     {
         return $this->hasRestrictedVoiceAndVideoMessages;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getJoinToSendMessages(): ?bool
+    public function getJoinToSendMessages(): ?true
     {
         return $this->joinToSendMessages;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getJoinByRequest(): ?bool
+    public function getJoinByRequest(): ?true
     {
         return $this->joinByRequest;
     }
@@ -396,9 +396,9 @@ final class ChatFullInfo
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanSendPaidMedia(): ?bool
+    public function getCanSendPaidMedia(): ?true
     {
         return $this->canSendPaidMedia;
     }
@@ -428,33 +428,33 @@ final class ChatFullInfo
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getHasAggressiveAntiSpamEnabled(): ?bool
+    public function getHasAggressiveAntiSpamEnabled(): ?true
     {
         return $this->hasAggressiveAntiSpamEnabled;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getHasHiddenMembers(): ?bool
+    public function getHasHiddenMembers(): ?true
     {
         return $this->hasHiddenMembers;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getHasProtectedContent(): ?bool
+    public function getHasProtectedContent(): ?true
     {
         return $this->hasProtectedContent;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getHasVisibleHistory(): ?bool
+    public function getHasVisibleHistory(): ?true
     {
         return $this->hasVisibleHistory;
     }
@@ -468,9 +468,9 @@ final class ChatFullInfo
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanSetStickerSet(): ?bool
+    public function getCanSetStickerSet(): ?true
     {
         return $this->canSetStickerSet;
     }

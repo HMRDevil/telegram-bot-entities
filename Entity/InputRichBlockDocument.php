@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockDocument
 {
     /**
-     * @param string $type Type of the block, always "document"
+     * @param string $type Type of the block, always “document”
      * @param InputMediaDocument $document The document. Caption is ignored.
      * @param RichBlockCaption|null $caption Optional. Caption of the block
     */

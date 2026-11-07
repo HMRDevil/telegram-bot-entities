@@ -27,8 +27,8 @@ final class Message
      * @param string|null $guestQueryId Optional. The unique identifier for the guest query. Use this identifier with the method answerGuestQuery to send a response message. If non-empty, the message belongs to the chat where the guest bot was summoned, which may not coincide with other existing bot chats sharing the same identifier.
      * @param string|null $businessConnectionId Optional. Unique identifier of the business connection from which the message was received. If non-empty, the message belongs to a chat of the corresponding business account that is independent from any potential bot chat which might share the same identifier.
      * @param MessageOrigin|null $forwardOrigin Optional. Information about the original message for forwarded messages
-     * @param bool|null $isTopicMessage Optional. True, if the message is sent to a topic in a forum supergroup or a private chat with the bot
-     * @param bool|null $isAutomaticForward Optional. True, if the message is a channel post that was automatically forwarded to the connected discussion group
+     * @param true|null $isTopicMessage Optional. True, if the message is sent to a topic in a forum supergroup or a private chat with the bot
+     * @param true|null $isAutomaticForward Optional. True, if the message is a channel post that was automatically forwarded to the connected discussion group
      * @param Message|null $replyToMessage Optional. For replies in the same chat and message thread, the original message. Note that the Message object in this field will not contain further reply_to_message fields even if it itself is a reply. If the message is a reply to an ephemeral message, then this field may be omitted.
      * @param ExternalReplyInfo|null $externalReply Optional. Information about the message that is being replied to, which may come from another chat or forum topic
      * @param TextQuote|null $quote Optional. For replies that quote part of the original message, the quoted part of the message
@@ -39,9 +39,9 @@ final class Message
      * @param User|null $guestBotCallerUser Optional. For a message sent by a guest bot, this is the user whose original message triggered the bot's response
      * @param Chat|null $guestBotCallerChat Optional. For a message sent by a guest bot, this is the chat whose original message triggered the bot's response
      * @param int|null $editDate Optional. Date the message was last edited in Unix time
-     * @param bool|null $hasProtectedContent Optional. True, if the message can't be forwarded
-     * @param bool|null $isFromOffline Optional. True, if the message was sent by an implicit action, for example, as an away or a greeting business message, or as a scheduled message
-     * @param bool|null $isPaidPost Optional. True, if the message is a paid post. Note that such posts must not be deleted for 24 hours to receive the payment and can't be edited.
+     * @param true|null $hasProtectedContent Optional. True, if the message can't be forwarded
+     * @param true|null $isFromOffline Optional. True, if the message was sent by an implicit action, for example, as an away or a greeting business message, or as a scheduled message
+     * @param true|null $isPaidPost Optional. True, if the message is a paid post. Note that such posts must not be deleted for 24 hours to receive the payment and can't be edited.
      * @param string|null $mediaGroupId Optional. The unique identifier inside this chat of a media message group this message belongs to
      * @param string|null $authorSignature Optional. Signature of the post author for messages in channels, or the custom title of an anonymous group administrator
      * @param int|null $paidStarCount Optional. The number of Telegram Stars that were paid by the sender of the message to send it
@@ -64,12 +64,12 @@ final class Message
      * @param Voice|null $voice Optional. Message is a voice message, information about the file
      * @param string|null $caption Optional. Caption for the animation, audio, document, paid media, photo, video or voice
      * @param MessageEntity[]|null $captionEntities Optional. For messages with a caption, special entities like usernames, URLs, bot commands, etc. that appear in the caption
-     * @param bool|null $showCaptionAboveMedia Optional. True, if the caption must be shown above the message media
-     * @param bool|null $hasMediaSpoiler Optional. True, if the message media is covered by a spoiler animation
+     * @param true|null $showCaptionAboveMedia Optional. True, if the caption must be shown above the message media
+     * @param true|null $hasMediaSpoiler Optional. True, if the message media is covered by a spoiler animation
      * @param Checklist|null $checklist Optional. Message is a checklist
      * @param Contact|null $contact Optional. Message is a shared contact, information about the contact
      * @param Dice|null $dice Optional. Message is a dice with random value
-     * @param Game|null $game Optional. Message is a game, information about the game. More about games: https://core.telegram.org/bots/api#games
+     * @param Game|null $game Optional. Message is a game, information about the game. More about games »
      * @param Poll|null $poll Optional. Message is a native poll, information about the poll
      * @param Venue|null $venue Optional. Message is a venue, information about the venue. For backward compatibility, when this field is set, the location field will also be set.
      * @param Location|null $location Optional. Message is a shared location, information about the location
@@ -79,23 +79,23 @@ final class Message
      * @param ChatOwnerChanged|null $chatOwnerChanged Optional. Service message: chat owner has changed
      * @param string|null $newChatTitle Optional. A chat title was changed to this value
      * @param PhotoSize[]|null $newChatPhoto Optional. A chat photo was change to this value
-     * @param bool|null $deleteChatPhoto Optional. Service message: the chat photo was deleted
-     * @param bool|null $groupChatCreated Optional. Service message: the group has been created
-     * @param bool|null $supergroupChatCreated Optional. Service message: the supergroup has been created. This field can't be received in a message coming through updates, because bot can't be a member of a supergroup when it is created. It can only be found in reply_to_message if someone replies to a very first message in a directly created supergroup.
-     * @param bool|null $channelChatCreated Optional. Service message: the channel has been created. This field can't be received in a message coming through updates, because bot can't be a member of a channel when it is created. It can only be found in reply_to_message if someone replies to a very first message in a channel.
+     * @param true|null $deleteChatPhoto Optional. Service message: the chat photo was deleted
+     * @param true|null $groupChatCreated Optional. Service message: the group has been created
+     * @param true|null $supergroupChatCreated Optional. Service message: the supergroup has been created. This field can't be received in a message coming through updates, because bot can't be a member of a supergroup when it is created. It can only be found in reply_to_message if someone replies to a very first message in a directly created supergroup.
+     * @param true|null $channelChatCreated Optional. Service message: the channel has been created. This field can't be received in a message coming through updates, because bot can't be a member of a channel when it is created. It can only be found in reply_to_message if someone replies to a very first message in a channel.
      * @param MessageAutoDeleteTimerChanged|null $messageAutoDeleteTimerChanged Optional. Service message: auto-delete timer settings changed in the chat
      * @param int|null $migrateToChatId Optional. The group has been migrated to a supergroup with the specified identifier. This number may have more than 32 significant bits and some programming languages may have difficulty/silent defects in interpreting it. But it has at most 52 significant bits, so a signed 64-bit integer or double-precision float type are safe for storing this identifier.
      * @param int|null $migrateFromChatId Optional. The supergroup has been migrated from a group with the specified identifier. This number may have more than 32 significant bits and some programming languages may have difficulty/silent defects in interpreting it. But it has at most 52 significant bits, so a signed 64-bit integer or double-precision float type are safe for storing this identifier.
      * @param MaybeInaccessibleMessage|null $pinnedMessage Optional. Specified message was pinned. Note that the Message object in this field will not contain further reply_to_message fields even if it itself is a reply.
-     * @param Invoice|null $invoice Optional. Message is an invoice for a payment, information about the invoice. More about payments: https://core.telegram.org/bots/api#payments
-     * @param SuccessfulPayment|null $successfulPayment Optional. Message is a service message about a successful payment, information about the payment. More about payments: https://core.telegram.org/bots/api#payments
-     * @param RefundedPayment|null $refundedPayment Optional. Message is a service message about a refunded payment, information about the payment. More about payments: https://core.telegram.org/bots/api#payments
+     * @param Invoice|null $invoice Optional. Message is an invoice for a payment, information about the invoice. More about payments »
+     * @param SuccessfulPayment|null $successfulPayment Optional. Message is a service message about a successful payment, information about the payment. More about payments »
+     * @param RefundedPayment|null $refundedPayment Optional. Message is a service message about a refunded payment, information about the payment. More about payments »
      * @param UsersShared|null $usersShared Optional. Service message: users were shared with the bot
      * @param ChatShared|null $chatShared Optional. Service message: a chat was shared with the bot
      * @param GiftInfo|null $gift Optional. Service message: a regular gift was sent or received
      * @param UniqueGiftInfo|null $uniqueGift Optional. Service message: a unique gift was sent or received
      * @param GiftInfo|null $giftUpgradeSent Optional. Service message: upgrade of a gift was purchased after the gift was sent
-     * @param string|null $connectedWebsite Optional. The domain name of the website on which the user has logged in. More about Telegram Login: https://core.telegram.org/widgets/login
+     * @param string|null $connectedWebsite Optional. The domain name of the website on which the user has logged in. More about Telegram Login »
      * @param WriteAccessAllowed|null $writeAccessAllowed Optional. Service message: the user allowed the bot to write messages after adding it to the attachment or side menu, launching a Web App from a link, or accepting an explicit request from a Web App sent by the method requestWriteAccess
      * @param PassportData|null $passportData Optional. Telegram Passport data
      * @param ProximityAlertTriggered|null $proximityAlertTriggered Optional. Service message: a user in the chat triggered another user's proximity alert while sharing Live Location
@@ -150,8 +150,8 @@ final class Message
          private ?string $guestQueryId = null,
          private ?string $businessConnectionId = null,
          private ?MessageOrigin $forwardOrigin = null,
-         private ?bool $isTopicMessage = null,
-         private ?bool $isAutomaticForward = null,
+         private ?true $isTopicMessage = null,
+         private ?true $isAutomaticForward = null,
          private ?Message $replyToMessage = null,
          private ?ExternalReplyInfo $externalReply = null,
          private ?TextQuote $quote = null,
@@ -162,9 +162,9 @@ final class Message
          private ?User $guestBotCallerUser = null,
          private ?Chat $guestBotCallerChat = null,
          private ?int $editDate = null,
-         private ?bool $hasProtectedContent = null,
-         private ?bool $isFromOffline = null,
-         private ?bool $isPaidPost = null,
+         private ?true $hasProtectedContent = null,
+         private ?true $isFromOffline = null,
+         private ?true $isPaidPost = null,
          private ?string $mediaGroupId = null,
          private ?string $authorSignature = null,
          private ?int $paidStarCount = null,
@@ -187,8 +187,8 @@ final class Message
          private ?Voice $voice = null,
          private ?string $caption = null,
          private ?array $captionEntities = null,
-         private ?bool $showCaptionAboveMedia = null,
-         private ?bool $hasMediaSpoiler = null,
+         private ?true $showCaptionAboveMedia = null,
+         private ?true $hasMediaSpoiler = null,
          private ?Checklist $checklist = null,
          private ?Contact $contact = null,
          private ?Dice $dice = null,
@@ -202,10 +202,10 @@ final class Message
          private ?ChatOwnerChanged $chatOwnerChanged = null,
          private ?string $newChatTitle = null,
          private ?array $newChatPhoto = null,
-         private ?bool $deleteChatPhoto = null,
-         private ?bool $groupChatCreated = null,
-         private ?bool $supergroupChatCreated = null,
-         private ?bool $channelChatCreated = null,
+         private ?true $deleteChatPhoto = null,
+         private ?true $groupChatCreated = null,
+         private ?true $supergroupChatCreated = null,
+         private ?true $channelChatCreated = null,
          private ?MessageAutoDeleteTimerChanged $messageAutoDeleteTimerChanged = null,
          private ?int $migrateToChatId = null,
          private ?int $migrateFromChatId = null,
@@ -378,17 +378,17 @@ final class Message
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsTopicMessage(): ?bool
+    public function getIsTopicMessage(): ?true
     {
         return $this->isTopicMessage;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsAutomaticForward(): ?bool
+    public function getIsAutomaticForward(): ?true
     {
         return $this->isAutomaticForward;
     }
@@ -474,25 +474,25 @@ final class Message
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getHasProtectedContent(): ?bool
+    public function getHasProtectedContent(): ?true
     {
         return $this->hasProtectedContent;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsFromOffline(): ?bool
+    public function getIsFromOffline(): ?true
     {
         return $this->isFromOffline;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsPaidPost(): ?bool
+    public function getIsPaidPost(): ?true
     {
         return $this->isPaidPost;
     }
@@ -674,17 +674,17 @@ final class Message
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getShowCaptionAboveMedia(): ?bool
+    public function getShowCaptionAboveMedia(): ?true
     {
         return $this->showCaptionAboveMedia;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getHasMediaSpoiler(): ?bool
+    public function getHasMediaSpoiler(): ?true
     {
         return $this->hasMediaSpoiler;
     }
@@ -794,33 +794,33 @@ final class Message
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getDeleteChatPhoto(): ?bool
+    public function getDeleteChatPhoto(): ?true
     {
         return $this->deleteChatPhoto;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getGroupChatCreated(): ?bool
+    public function getGroupChatCreated(): ?true
     {
         return $this->groupChatCreated;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getSupergroupChatCreated(): ?bool
+    public function getSupergroupChatCreated(): ?true
     {
         return $this->supergroupChatCreated;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getChannelChatCreated(): ?bool
+    public function getChannelChatCreated(): ?true
     {
         return $this->channelChatCreated;
     }

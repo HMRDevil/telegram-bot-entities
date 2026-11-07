@@ -12,20 +12,20 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockTable
 {
     /**
-     * @param string $type Type of the block, always "table"
+     * @param string $type Type of the block, always “table”
      * @param RichBlockTableCell[][] $cells Cells of the table
-     * @param bool|null $isBordered Optional. Pass True if the table has borders
-     * @param bool|null $isStriped Optional. Pass True if the table is striped
-     * @param bool|null $isCompact Optional. Pass True if table cells must have smaller indents
+     * @param true|null $isBordered Optional. Pass True if the table has borders
+     * @param true|null $isStriped Optional. Pass True if the table is striped
+     * @param true|null $isCompact Optional. Pass True if table cells must have smaller indents
      * @param RichText|null $caption Optional. Caption of the table
     */
     public function __construct
     (
          private string $type,
          private array $cells,
-         private ?bool $isBordered = null,
-         private ?bool $isStriped = null,
-         private ?bool $isCompact = null,
+         private ?true $isBordered = null,
+         private ?true $isStriped = null,
+         private ?true $isCompact = null,
          private ?RichText $caption = null
     ) {}
     
@@ -46,25 +46,25 @@ final class InputRichBlockTable
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsBordered(): ?bool
+    public function getIsBordered(): ?true
     {
         return $this->isBordered;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsStriped(): ?bool
+    public function getIsStriped(): ?true
     {
         return $this->isStriped;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsCompact(): ?bool
+    public function getIsCompact(): ?true
     {
         return $this->isCompact;
     }

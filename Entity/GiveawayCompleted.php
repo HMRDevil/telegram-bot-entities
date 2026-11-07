@@ -15,14 +15,14 @@ final class GiveawayCompleted
      * @param int $winnerCount Number of winners in the giveaway
      * @param int|null $unclaimedPrizeCount Optional. Number of undistributed prizes
      * @param Message|null $giveawayMessage Optional. Message with the giveaway that was completed, if it wasn't deleted
-     * @param bool|null $isStarGiveaway Optional. True, if the giveaway is a Telegram Star giveaway. Otherwise, currently, the giveaway is a Telegram Premium giveaway.
+     * @param true|null $isStarGiveaway Optional. True, if the giveaway is a Telegram Star giveaway. Otherwise, currently, the giveaway is a Telegram Premium giveaway.
     */
     public function __construct
     (
          private int $winnerCount,
          private ?int $unclaimedPrizeCount = null,
          private ?Message $giveawayMessage = null,
-         private ?bool $isStarGiveaway = null
+         private ?true $isStarGiveaway = null
     ) {}
     
     /**
@@ -50,9 +50,9 @@ final class GiveawayCompleted
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsStarGiveaway(): ?bool
+    public function getIsStarGiveaway(): ?true
     {
         return $this->isStarGiveaway;
     }

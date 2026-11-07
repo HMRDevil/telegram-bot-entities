@@ -12,14 +12,14 @@ namespace Phppride\TelegramBot\Entity;
 final class SuccessfulPayment
 {
     /**
-     * @param string $currency Three-letter ISO 4217 currency code, or "XTR" for payments in Telegram Stars
+     * @param string $currency Three-letter ISO 4217 currency code, or “XTR” for payments in Telegram Stars
      * @param int $totalAmount Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).
      * @param string $invoicePayload Bot-specified invoice payload
      * @param string $telegramPaymentChargeId Telegram payment identifier
      * @param string $providerPaymentChargeId Provider payment identifier
      * @param int|null $subscriptionExpirationDate Optional. Expiration date of the subscription, in Unix time; for recurring payments only
-     * @param bool|null $isRecurring Optional. True, if the payment is a recurring payment for a subscription
-     * @param bool|null $isFirstRecurring Optional. True, if the payment is the first payment for a subscription
+     * @param true|null $isRecurring Optional. True, if the payment is a recurring payment for a subscription
+     * @param true|null $isFirstRecurring Optional. True, if the payment is the first payment for a subscription
      * @param string|null $shippingOptionId Optional. Identifier of the shipping option chosen by the user
      * @param OrderInfo|null $orderInfo Optional. Order information provided by the user
     */
@@ -31,8 +31,8 @@ final class SuccessfulPayment
          private string $telegramPaymentChargeId,
          private string $providerPaymentChargeId,
          private ?int $subscriptionExpirationDate = null,
-         private ?bool $isRecurring = null,
-         private ?bool $isFirstRecurring = null,
+         private ?true $isRecurring = null,
+         private ?true $isFirstRecurring = null,
          private ?string $shippingOptionId = null,
          private ?OrderInfo $orderInfo = null
     ) {}
@@ -86,17 +86,17 @@ final class SuccessfulPayment
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsRecurring(): ?bool
+    public function getIsRecurring(): ?true
     {
         return $this->isRecurring;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsFirstRecurring(): ?bool
+    public function getIsFirstRecurring(): ?true
     {
         return $this->isFirstRecurring;
     }

@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RevenueWithdrawalStatePending
 {
     /**
-     * @param string $type Type of the state, always "pending"
+     * @param string $type Type of the state, always “pending”
     */
     public function __construct
     (

@@ -13,7 +13,7 @@ final class PassportElementErrorFile
 {
     /**
      * @param string $source Error source, must be file
-     * @param string $type The section of the user's Telegram Passport which has the issue, one of "utility_bill", "bank_statement", "rental_agreement", "passport_registration", "temporary_registration"
+     * @param string $type The section of the user's Telegram Passport which has the issue, one of “utility_bill”, “bank_statement”, “rental_agreement”, “passport_registration”, “temporary_registration”
      * @param string $fileHash Base64-encoded file hash
      * @param string $message Error message
     */

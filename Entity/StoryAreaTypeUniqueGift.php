@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class StoryAreaTypeUniqueGift
 {
     /**
-     * @param string $type Type of the area, always "unique_gift"
+     * @param string $type Type of the area, always “unique_gift”
      * @param string $name Unique name of the gift
     */
     public function __construct

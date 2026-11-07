@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class BackgroundTypeChatTheme
 {
     /**
-     * @param string $type Type of the background, always "chat_theme"
+     * @param string $type Type of the background, always “chat_theme”
      * @param string $themeName Name of the chat theme, which is usually an emoji
     */
     public function __construct

@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextSubscript
 {
     /**
-     * @param string $type Type of the rich text, always "subscript"
+     * @param string $type Type of the rich text, always “subscript”
      * @param RichText $text The text
     */
     public function __construct

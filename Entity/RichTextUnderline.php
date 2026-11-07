@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextUnderline
 {
     /**
-     * @param string $type Type of the rich text, always "underline"
+     * @param string $type Type of the rich text, always “underline”
      * @param RichText $text The text
     */
     public function __construct

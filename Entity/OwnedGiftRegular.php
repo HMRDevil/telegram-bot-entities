@@ -12,20 +12,20 @@ namespace Phppride\TelegramBot\Entity;
 final class OwnedGiftRegular
 {
     /**
-     * @param string $type Type of the gift, always "regular"
+     * @param string $type Type of the gift, always “regular”
      * @param Gift $gift Information about the regular gift
      * @param int $sendDate Date the gift was sent in Unix time
      * @param string|null $ownedGiftId Optional. Unique identifier of the gift for the bot; for gifts received on behalf of business accounts only
      * @param User|null $senderUser Optional. Sender of the gift if it is a known user
      * @param string|null $text Optional. Text of the message that was added to the gift
      * @param MessageEntity[]|null $entities Optional. Special entities that appear in the text
-     * @param bool|null $isPrivate Optional. True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone will be able to see them
-     * @param bool|null $isSaved Optional. True, if the gift is displayed on the account's profile page; for gifts received on behalf of business accounts only
-     * @param bool|null $canBeUpgraded Optional. True, if the gift can be upgraded to a unique gift; for gifts received on behalf of business accounts only
-     * @param bool|null $wasRefunded Optional. True, if the gift was refunded and isn't available anymore
+     * @param true|null $isPrivate Optional. True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone will be able to see them
+     * @param true|null $isSaved Optional. True, if the gift is displayed on the account's profile page; for gifts received on behalf of business accounts only
+     * @param true|null $canBeUpgraded Optional. True, if the gift can be upgraded to a unique gift; for gifts received on behalf of business accounts only
+     * @param true|null $wasRefunded Optional. True, if the gift was refunded and isn't available anymore
      * @param int|null $convertStarCount Optional. Number of Telegram Stars that can be claimed by the receiver instead of the gift; omitted if the gift cannot be converted to Telegram Stars; for gifts received on behalf of business accounts only
      * @param int|null $prepaidUpgradeStarCount Optional. Number of Telegram Stars that were paid for the ability to upgrade the gift
-     * @param bool|null $isUpgradeSeparate Optional. True, if the gift's upgrade was purchased after the gift was sent; for gifts received on behalf of business accounts only
+     * @param true|null $isUpgradeSeparate Optional. True, if the gift's upgrade was purchased after the gift was sent; for gifts received on behalf of business accounts only
      * @param int|null $uniqueGiftNumber Optional. Unique number reserved for this gift when upgraded. See the number field in UniqueGift.
     */
     public function __construct
@@ -37,13 +37,13 @@ final class OwnedGiftRegular
          private ?User $senderUser = null,
          private ?string $text = null,
          private ?array $entities = null,
-         private ?bool $isPrivate = null,
-         private ?bool $isSaved = null,
-         private ?bool $canBeUpgraded = null,
-         private ?bool $wasRefunded = null,
+         private ?true $isPrivate = null,
+         private ?true $isSaved = null,
+         private ?true $canBeUpgraded = null,
+         private ?true $wasRefunded = null,
          private ?int $convertStarCount = null,
          private ?int $prepaidUpgradeStarCount = null,
-         private ?bool $isUpgradeSeparate = null,
+         private ?true $isUpgradeSeparate = null,
          private ?int $uniqueGiftNumber = null
     ) {}
     
@@ -104,33 +104,33 @@ final class OwnedGiftRegular
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsPrivate(): ?bool
+    public function getIsPrivate(): ?true
     {
         return $this->isPrivate;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsSaved(): ?bool
+    public function getIsSaved(): ?true
     {
         return $this->isSaved;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanBeUpgraded(): ?bool
+    public function getCanBeUpgraded(): ?true
     {
         return $this->canBeUpgraded;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getWasRefunded(): ?bool
+    public function getWasRefunded(): ?true
     {
         return $this->wasRefunded;
     }
@@ -152,9 +152,9 @@ final class OwnedGiftRegular
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsUpgradeSeparate(): ?bool
+    public function getIsUpgradeSeparate(): ?true
     {
         return $this->isUpgradeSeparate;
     }

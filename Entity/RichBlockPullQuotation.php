@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichBlockPullQuotation
 {
     /**
-     * @param string $type Type of the block, always "pullquote"
+     * @param string $type Type of the block, always “pullquote”
      * @param RichText $text Text of the block
      * @param RichText|null $credit Optional. Credit of the block
     */

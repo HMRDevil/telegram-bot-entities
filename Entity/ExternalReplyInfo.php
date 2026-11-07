@@ -27,14 +27,14 @@ final class ExternalReplyInfo
      * @param Video|null $video Optional. Message is a video, information about the video
      * @param VideoNote|null $videoNote Optional. Message is a video note, information about the video message
      * @param Voice|null $voice Optional. Message is a voice message, information about the file
-     * @param bool|null $hasMediaSpoiler Optional. True, if the message media is covered by a spoiler animation
+     * @param true|null $hasMediaSpoiler Optional. True, if the message media is covered by a spoiler animation
      * @param Checklist|null $checklist Optional. Message is a checklist
      * @param Contact|null $contact Optional. Message is a shared contact, information about the contact
      * @param Dice|null $dice Optional. Message is a dice with random value
-     * @param Game|null $game Optional. Message is a game, information about the game. More about games: https://core.telegram.org/bots/api#games
+     * @param Game|null $game Optional. Message is a game, information about the game. More about games »
      * @param Giveaway|null $giveaway Optional. Message is a scheduled giveaway, information about the giveaway
      * @param GiveawayWinners|null $giveawayWinners Optional. A giveaway with public winners was completed
-     * @param Invoice|null $invoice Optional. Message is an invoice for a payment, information about the invoice. More about payments: https://core.telegram.org/bots/api#payments
+     * @param Invoice|null $invoice Optional. Message is an invoice for a payment, information about the invoice. More about payments »
      * @param Location|null $location Optional. Message is a shared location, information about the location
      * @param Poll|null $poll Optional. Message is a native poll, information about the poll
      * @param Venue|null $venue Optional. Message is a venue, information about the venue
@@ -56,7 +56,7 @@ final class ExternalReplyInfo
          private ?Video $video = null,
          private ?VideoNote $videoNote = null,
          private ?Voice $voice = null,
-         private ?bool $hasMediaSpoiler = null,
+         private ?true $hasMediaSpoiler = null,
          private ?Checklist $checklist = null,
          private ?Contact $contact = null,
          private ?Dice $dice = null,
@@ -190,9 +190,9 @@ final class ExternalReplyInfo
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getHasMediaSpoiler(): ?bool
+    public function getHasMediaSpoiler(): ?true
     {
         return $this->hasMediaSpoiler;
     }

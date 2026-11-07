@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class BackgroundFillSolid
 {
     /**
-     * @param string $type Type of the background fill, always "solid"
+     * @param string $type Type of the background fill, always “solid”
      * @param int $color The color of the background fill in the RGB24 format
     */
     public function __construct

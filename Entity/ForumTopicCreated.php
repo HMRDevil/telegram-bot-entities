@@ -15,14 +15,14 @@ final class ForumTopicCreated
      * @param string $name Name of the topic
      * @param int $iconColor Color of the topic icon in RGB format
      * @param string|null $iconCustomEmojiId Optional. Unique identifier of the custom emoji shown as the topic icon
-     * @param bool|null $isNameImplicit Optional. True, if the name of the topic wasn't specified explicitly by its creator and likely needs to be changed by the bot
+     * @param true|null $isNameImplicit Optional. True, if the name of the topic wasn't specified explicitly by its creator and likely needs to be changed by the bot
     */
     public function __construct
     (
          private string $name,
          private int $iconColor,
          private ?string $iconCustomEmojiId = null,
-         private ?bool $isNameImplicit = null
+         private ?true $isNameImplicit = null
     ) {}
     
     /**
@@ -50,9 +50,9 @@ final class ForumTopicCreated
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsNameImplicit(): ?bool
+    public function getIsNameImplicit(): ?true
     {
         return $this->isNameImplicit;
     }

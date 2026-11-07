@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockDivider
 {
     /**
-     * @param string $type Type of the block, always "divider"
+     * @param string $type Type of the block, always “divider”
     */
     public function __construct
     (

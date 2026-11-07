@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class ChatInviteLink
 {
     /**
-     * @param string $inviteLink The invite link. If the link was created by another chat administrator, then the second part of the link will be replaced with "...".
+     * @param string $inviteLink The invite link. If the link was created by another chat administrator, then the second part of the link will be replaced with “…”.
      * @param User $creator Creator of the link
      * @param bool $createsJoinRequest True, if users joining the chat via the link need to be approved by chat administrators
      * @param bool $isPrimary True, if the link is primary

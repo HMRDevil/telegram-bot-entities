@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextCashtag
 {
     /**
-     * @param string $type Type of the rich text, always "cashtag"
+     * @param string $type Type of the rich text, always “cashtag”
      * @param RichText $text The text
      * @param string $cashtag The cashtag
     */

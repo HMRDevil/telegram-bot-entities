@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class ChatMemberRestricted
 {
     /**
-     * @param string $status The member's status in the chat, always "restricted"
+     * @param string $status The member's status in the chat, always “restricted”
      * @param User $user Information about the user
      * @param bool $isMember True, if the user is a member of the chat at the moment of the request
      * @param bool $canSendMessages True, if the user is allowed to send text messages, rich messages, contacts, giveaways, giveaway winners, invoices, locations and venues

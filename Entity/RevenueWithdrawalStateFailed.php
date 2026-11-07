@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RevenueWithdrawalStateFailed
 {
     /**
-     * @param string $type Type of the state, always "failed"
+     * @param string $type Type of the state, always “failed”
     */
     public function __construct
     (

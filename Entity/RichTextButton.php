@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextButton
 {
     /**
-     * @param string $type Type of the rich text, always "button"
+     * @param string $type Type of the rich text, always “button”
      * @param RichMessageButton $button The button
     */
     public function __construct

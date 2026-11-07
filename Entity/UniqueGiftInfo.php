@@ -13,11 +13,11 @@ final class UniqueGiftInfo
 {
     /**
      * @param UniqueGift $gift Information about the gift
-     * @param string $origin Origin of the gift. Currently, either "upgrade" for gifts upgraded from regular gifts, "transfer" for gifts transferred from other users or channels, "resale" for gifts bought from other users, "gifted_upgrade" for upgrades purchased after the gift was sent, or "offer" for gifts bought or sold through gift purchase offers.
+     * @param string $origin Origin of the gift. Currently, either “upgrade” for gifts upgraded from regular gifts, “transfer” for gifts transferred from other users or channels, “resale” for gifts bought from other users, “gifted_upgrade” for upgrades purchased after the gift was sent, or “offer” for gifts bought or sold through gift purchase offers.
      * @param string|null $text Optional. Text of the message that was added to the gift
      * @param MessageEntity[]|null $entities Optional. Special entities that appear in the text
-     * @param bool|null $isPrivate Optional. True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone will be able to see them
-     * @param string|null $lastResaleCurrency Optional. For gifts bought from other users, the currency in which the payment for the gift was done. Currently, one of "XTR" for Telegram Stars or "TON" for TON grams.
+     * @param true|null $isPrivate Optional. True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone will be able to see them
+     * @param string|null $lastResaleCurrency Optional. For gifts bought from other users, the currency in which the payment for the gift was done. Currently, one of “XTR” for Telegram Stars or “TON” for TON grams.
      * @param int|null $lastResaleAmount Optional. For gifts bought from other users, the price paid for the gift in either Telegram Stars or nanograms
      * @param string|null $ownedGiftId Optional. Unique identifier of the received gift for the bot; only present for gifts received on behalf of business accounts
      * @param int|null $transferStarCount Optional. Number of Telegram Stars that must be paid to transfer the gift; omitted if the bot cannot transfer the gift
@@ -29,7 +29,7 @@ final class UniqueGiftInfo
          private string $origin,
          private ?string $text = null,
          private ?array $entities = null,
-         private ?bool $isPrivate = null,
+         private ?true $isPrivate = null,
          private ?string $lastResaleCurrency = null,
          private ?int $lastResaleAmount = null,
          private ?string $ownedGiftId = null,
@@ -70,9 +70,9 @@ final class UniqueGiftInfo
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsPrivate(): ?bool
+    public function getIsPrivate(): ?true
     {
         return $this->isPrivate;
     }

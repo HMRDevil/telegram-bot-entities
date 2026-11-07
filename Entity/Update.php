@@ -5,8 +5,7 @@ declare(strict_types=1);
 namespace Phppride\TelegramBot\Entity;
 
 /**
- * This object represents an incoming update.
- * At most one of the optional fields can be present in any given update.
+ * This object represents an incoming update.At most one of the optional fields can be present in any given update.
  *
  * @see https://core.telegram.org/bots/api#update
  */

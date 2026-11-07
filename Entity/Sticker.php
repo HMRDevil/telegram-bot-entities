@@ -14,7 +14,7 @@ final class Sticker
     /**
      * @param string $fileId Identifier for this file, which can be used to download or reuse the file
      * @param string $fileUniqueId Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file.
-     * @param string $type Type of the sticker, currently one of "regular", "mask", "custom_emoji". The type of the sticker is independent from its format, which is determined by the fields is_animated and is_video.
+     * @param string $type Type of the sticker, currently one of “regular”, “mask”, “custom_emoji”. The type of the sticker is independent from its format, which is determined by the fields is_animated and is_video.
      * @param int $width Sticker width
      * @param int $height Sticker height
      * @param bool $isAnimated True, if the sticker is animated
@@ -25,7 +25,7 @@ final class Sticker
      * @param File|null $premiumAnimation Optional. For premium regular stickers, premium animation for the sticker
      * @param MaskPosition|null $maskPosition Optional. For mask stickers, the position where the mask should be placed
      * @param string|null $customEmojiId Optional. For custom emoji stickers, unique identifier of the custom emoji
-     * @param bool|null $needsRepainting Optional. True, if the sticker must be repainted to a text color in messages, the color of the Telegram Premium badge in emoji status, white color on chat photos, or another appropriate color in other places
+     * @param true|null $needsRepainting Optional. True, if the sticker must be repainted to a text color in messages, the color of the Telegram Premium badge in emoji status, white color on chat photos, or another appropriate color in other places
      * @param int|null $fileSize Optional. File size in bytes
     */
     public function __construct
@@ -43,7 +43,7 @@ final class Sticker
          private ?File $premiumAnimation = null,
          private ?MaskPosition $maskPosition = null,
          private ?string $customEmojiId = null,
-         private ?bool $needsRepainting = null,
+         private ?true $needsRepainting = null,
          private ?int $fileSize = null
     ) {}
     
@@ -152,9 +152,9 @@ final class Sticker
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getNeedsRepainting(): ?bool
+    public function getNeedsRepainting(): ?true
     {
         return $this->needsRepainting;
     }

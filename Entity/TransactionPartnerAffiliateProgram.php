@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class TransactionPartnerAffiliateProgram
 {
     /**
-     * @param string $type Type of the transaction partner, always "affiliate_program"
+     * @param string $type Type of the transaction partner, always “affiliate_program”
      * @param int $commissionPerMille The number of Telegram Stars received by the bot for each 1000 Telegram Stars received by the affiliate program sponsor from referred users
      * @param User|null $sponsorUser Optional. Information about the bot that sponsored the affiliate program
     */

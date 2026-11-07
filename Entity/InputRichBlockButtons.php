@@ -12,9 +12,9 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockButtons
 {
     /**
-     * @param string $type Type of the block, always "buttons"
+     * @param string $type Type of the block, always “buttons”
      * @param RichMessageButton[] $buttons List of 1-8 buttons to send
-     * @param string|null $align Optional. Horizontal alignment of the buttons. Currently, must be one of "left", "center", or "right".
+     * @param string|null $align Optional. Horizontal alignment of the buttons. Currently, must be one of “left”, “center”, or “right”.
     */
     public function __construct
     (

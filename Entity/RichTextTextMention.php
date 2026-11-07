@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextTextMention
 {
     /**
-     * @param string $type Type of the rich text, always "text_mention"
+     * @param string $type Type of the rich text, always “text_mention”
      * @param RichText $text The text
      * @param User $user The mentioned user
     */

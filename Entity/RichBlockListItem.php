@@ -14,17 +14,17 @@ final class RichBlockListItem
     /**
      * @param string $label Label of the item
      * @param RichBlock[] $blocks The content of the item
-     * @param bool|null $hasCheckbox Optional. True, if the item has a checkbox
-     * @param bool|null $isChecked Optional. True, if the item has a checked checkbox
+     * @param true|null $hasCheckbox Optional. True, if the item has a checkbox
+     * @param true|null $isChecked Optional. True, if the item has a checked checkbox
      * @param int|null $value Optional. For ordered lists, the numeric value of the item label
-     * @param string|null $type Optional. For ordered lists, the type of the item label; must be one of "a" for lowercase letters, "A" for uppercase letters, "i" for lowercase Roman numerals, "I" for uppercase Roman numerals, or "1" for decimal numbers
+     * @param string|null $type Optional. For ordered lists, the type of the item label; must be one of “a” for lowercase letters, “A” for uppercase letters, “i” for lowercase Roman numerals, “I” for uppercase Roman numerals, or “1” for decimal numbers
     */
     public function __construct
     (
          private string $label,
          private array $blocks,
-         private ?bool $hasCheckbox = null,
-         private ?bool $isChecked = null,
+         private ?true $hasCheckbox = null,
+         private ?true $isChecked = null,
          private ?int $value = null,
          private ?string $type = null
     ) {}
@@ -46,17 +46,17 @@ final class RichBlockListItem
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getHasCheckbox(): ?bool
+    public function getHasCheckbox(): ?true
     {
         return $this->hasCheckbox;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsChecked(): ?bool
+    public function getIsChecked(): ?true
     {
         return $this->isChecked;
     }

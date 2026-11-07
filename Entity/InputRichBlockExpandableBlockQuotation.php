@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockExpandableBlockQuotation
 {
     /**
-     * @param string $type Type of the block, always "expandable_blockquote"
+     * @param string $type Type of the block, always “expandable_blockquote”
      * @param RichText $text Content of the block
      * @param RichText|null $credit Optional. Credit of the block
     */

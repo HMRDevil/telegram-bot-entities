@@ -12,21 +12,21 @@ namespace Phppride\TelegramBot\Entity;
 final class ForceReply
 {
     /**
-     * @param bool $forceReply Shows reply interface to the user, as if they had manually selected the bot's message and tapped 'Reply'
+     * @param true $forceReply Shows reply interface to the user, as if they had manually selected the bot's message and tapped 'Reply'
      * @param string|null $inputFieldPlaceholder Optional. The placeholder to be shown in the input field when the reply is active; 1-64 characters
      * @param bool|null $selective Optional. Use this parameter if you want to force reply from specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's message is a reply to a message in the same chat and forum topic, sender of the original message.
     */
     public function __construct
     (
-         private bool $forceReply,
+         private true $forceReply,
          private ?string $inputFieldPlaceholder = null,
          private ?bool $selective = null
     ) {}
     
     /**
-     * @return bool
+     * @return true
      */
-    public function getForceReply(): bool
+    public function getForceReply(): true
     {
         return $this->forceReply;
     }

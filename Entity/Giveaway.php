@@ -15,8 +15,8 @@ final class Giveaway
      * @param Chat[] $chats The list of chats which the user must join to participate in the giveaway
      * @param int $winnersSelectionDate Point in time (Unix timestamp) when winners of the giveaway will be selected
      * @param int $winnerCount The number of users which are supposed to be selected as winners of the giveaway
-     * @param bool|null $onlyNewMembers Optional. True, if only users who join the chats after the giveaway started should be eligible to win
-     * @param bool|null $hasPublicWinners Optional. True, if the list of giveaway winners will be visible to everyone
+     * @param true|null $onlyNewMembers Optional. True, if only users who join the chats after the giveaway started should be eligible to win
+     * @param true|null $hasPublicWinners Optional. True, if the list of giveaway winners will be visible to everyone
      * @param string|null $prizeDescription Optional. Description of additional giveaway prize
      * @param String[]|null $countryCodes Optional. A list of two-letter ISO 3166-1 alpha-2 country codes indicating the countries from which eligible users for the giveaway must come. If empty, then all users can participate in the giveaway. Users with a phone number that was bought on Fragment can always participate in giveaways.
      * @param int|null $prizeStarCount Optional. The number of Telegram Stars to be split between giveaway winners; for Telegram Star giveaways only
@@ -27,8 +27,8 @@ final class Giveaway
          private array $chats,
          private int $winnersSelectionDate,
          private int $winnerCount,
-         private ?bool $onlyNewMembers = null,
-         private ?bool $hasPublicWinners = null,
+         private ?true $onlyNewMembers = null,
+         private ?true $hasPublicWinners = null,
          private ?string $prizeDescription = null,
          private ?array $countryCodes = null,
          private ?int $prizeStarCount = null,
@@ -60,17 +60,17 @@ final class Giveaway
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getOnlyNewMembers(): ?bool
+    public function getOnlyNewMembers(): ?true
     {
         return $this->onlyNewMembers;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getHasPublicWinners(): ?bool
+    public function getHasPublicWinners(): ?true
     {
         return $this->hasPublicWinners;
     }

@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextCustomEmoji
 {
     /**
-     * @param string $type Type of the rich text, always "custom_emoji"
+     * @param string $type Type of the rich text, always “custom_emoji”
      * @param string $customEmojiId Unique identifier of the custom emoji. Use getCustomEmojiStickers to get full information about the sticker.
      * @param string $alternativeText Alternative emoji for the custom emoji
     */

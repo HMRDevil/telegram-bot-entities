@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockParagraph
 {
     /**
-     * @param string $type Type of the block, always "paragraph"
+     * @param string $type Type of the block, always “paragraph”
      * @param RichText $text Text of the block
     */
     public function __construct

@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextSpoiler
 {
     /**
-     * @param string $type Type of the rich text, always "spoiler"
+     * @param string $type Type of the rich text, always “spoiler”
      * @param RichText $text The text
     */
     public function __construct

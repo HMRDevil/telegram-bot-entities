@@ -12,19 +12,19 @@ namespace Phppride\TelegramBot\Entity;
 final class BackgroundTypeWallpaper
 {
     /**
-     * @param string $type Type of the background, always "wallpaper"
+     * @param string $type Type of the background, always “wallpaper”
      * @param Document $document Document with the wallpaper
      * @param int $darkThemeDimming Dimming of the background in dark themes, as a percentage; 0-100
-     * @param bool|null $isBlurred Optional. True, if the wallpaper is downscaled to fit in a 450x450 square and then box-blurred with radius 12
-     * @param bool|null $isMoving Optional. True, if the background moves slightly when the device is tilted
+     * @param true|null $isBlurred Optional. True, if the wallpaper is downscaled to fit in a 450x450 square and then box-blurred with radius 12
+     * @param true|null $isMoving Optional. True, if the background moves slightly when the device is tilted
     */
     public function __construct
     (
          private string $type,
          private Document $document,
          private int $darkThemeDimming,
-         private ?bool $isBlurred = null,
-         private ?bool $isMoving = null
+         private ?true $isBlurred = null,
+         private ?true $isMoving = null
     ) {}
     
     /**
@@ -52,17 +52,17 @@ final class BackgroundTypeWallpaper
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsBlurred(): ?bool
+    public function getIsBlurred(): ?true
     {
         return $this->isBlurred;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsMoving(): ?bool
+    public function getIsMoving(): ?true
     {
         return $this->isMoving;
     }

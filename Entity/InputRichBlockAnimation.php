@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockAnimation
 {
     /**
-     * @param string $type Type of the block, always "animation"
+     * @param string $type Type of the block, always “animation”
      * @param InputMediaAnimation $animation The animation. Caption is ignored.
      * @param RichBlockCaption|null $caption Optional. Caption of the block
     */

@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextBold
 {
     /**
-     * @param string $type Type of the rich text, always "bold"
+     * @param string $type Type of the rich text, always “bold”
      * @param RichText $text The text
     */
     public function __construct

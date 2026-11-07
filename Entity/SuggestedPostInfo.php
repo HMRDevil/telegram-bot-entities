@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class SuggestedPostInfo
 {
     /**
-     * @param string $state State of the suggested post. Currently, it can be one of "pending", "approved", "declined".
+     * @param string $state State of the suggested post. Currently, it can be one of “pending”, “approved”, “declined”.
      * @param SuggestedPostPrice|null $price Optional. Proposed price of the post. If the field is omitted, then the post is unpaid.
      * @param int|null $sendDate Optional. Proposed send date of the post. If the field is omitted, then the post can be published at any time within 30 days at the sole discretion of the user or administrator who approves it.
     */

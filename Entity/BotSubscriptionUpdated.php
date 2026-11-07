@@ -14,7 +14,7 @@ final class BotSubscriptionUpdated
     /**
      * @param User $user User who subscribed for payments toward the bot
      * @param string $invoicePayload Bot-specified invoice payload
-     * @param string $state The new state of the subscription. Currently, it can be one of "canceled" if the user canceled the subscription, "active" if the user re-enabled a previously canceled subscription, or "failed" if payment for the subscription failed.
+     * @param string $state The new state of the subscription. Currently, it can be one of “canceled” if the user canceled the subscription, “active” if the user re-enabled a previously canceled subscription, or “failed” if payment for the subscription failed.
     */
     public function __construct
     (

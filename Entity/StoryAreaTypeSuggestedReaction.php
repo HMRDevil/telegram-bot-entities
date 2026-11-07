@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class StoryAreaTypeSuggestedReaction
 {
     /**
-     * @param string $type Type of the area, always "suggested_reaction"
+     * @param string $type Type of the area, always “suggested_reaction”
      * @param ReactionType $reactionType Type of the reaction
      * @param bool|null $isDark Optional. Pass True if the reaction area has a dark background
      * @param bool|null $isFlipped Optional. Pass True if reaction area corner is flipped

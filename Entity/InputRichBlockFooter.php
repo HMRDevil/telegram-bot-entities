@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockFooter
 {
     /**
-     * @param string $type Type of the block, always "footer"
+     * @param string $type Type of the block, always “footer”
      * @param RichText $text Text of the block
     */
     public function __construct

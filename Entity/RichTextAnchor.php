@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextAnchor
 {
     /**
-     * @param string $type Type of the rich text, always "anchor"
+     * @param string $type Type of the rich text, always “anchor”
      * @param string $name The name of the anchor
     */
     public function __construct

@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class MessageOriginChat
 {
     /**
-     * @param string $type Type of the message origin, always "chat"
+     * @param string $type Type of the message origin, always “chat”
      * @param int $date Date the message was sent originally in Unix time
      * @param Chat $senderChat Chat that sent the message originally
      * @param string|null $authorSignature Optional. For messages originally sent by an anonymous chat administrator, original message author signature

@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class ChatMemberOwner
 {
     /**
-     * @param string $status The member's status in the chat, always "creator"
+     * @param string $status The member's status in the chat, always “creator”
      * @param User $user Information about the user
      * @param bool $isAnonymous True, if the user's presence in the chat is hidden
      * @param string|null $customTitle Optional. Custom title for this user

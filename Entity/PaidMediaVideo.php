@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class PaidMediaVideo
 {
     /**
-     * @param string $type Type of the paid media, always "video"
+     * @param string $type Type of the paid media, always “video”
      * @param Video $video The video
     */
     public function __construct

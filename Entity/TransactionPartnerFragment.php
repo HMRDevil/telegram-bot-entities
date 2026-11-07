@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class TransactionPartnerFragment
 {
     /**
-     * @param string $type Type of the transaction partner, always "fragment"
+     * @param string $type Type of the transaction partner, always “fragment”
      * @param RevenueWithdrawalState|null $withdrawalState Optional. State of the transaction if the transaction is outgoing
     */
     public function __construct

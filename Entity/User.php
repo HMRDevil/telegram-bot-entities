@@ -18,8 +18,8 @@ final class User
      * @param string|null $lastName Optional. User's or bot's last name
      * @param string|null $username Optional. User's or bot's username
      * @param string|null $languageCode Optional. IETF language tag of the user's language
-     * @param bool|null $isPremium Optional. True, if this user is a Telegram Premium user
-     * @param bool|null $addedToAttachmentMenu Optional. True, if this user added the bot to the attachment menu
+     * @param true|null $isPremium Optional. True, if this user is a Telegram Premium user
+     * @param true|null $addedToAttachmentMenu Optional. True, if this user added the bot to the attachment menu
      * @param bool|null $canJoinGroups Optional. True, if the bot can be invited to groups. Returned only in getMe.
      * @param bool|null $canReadAllGroupMessages Optional. True, if privacy mode is disabled for the bot. Returned only in getMe.
      * @param bool|null $supportsGuestQueries Optional. True, if the bot supports guest queries from chats it is not a member of. Returned only in getMe.
@@ -39,8 +39,8 @@ final class User
          private ?string $lastName = null,
          private ?string $username = null,
          private ?string $languageCode = null,
-         private ?bool $isPremium = null,
-         private ?bool $addedToAttachmentMenu = null,
+         private ?true $isPremium = null,
+         private ?true $addedToAttachmentMenu = null,
          private ?bool $canJoinGroups = null,
          private ?bool $canReadAllGroupMessages = null,
          private ?bool $supportsGuestQueries = null,
@@ -102,17 +102,17 @@ final class User
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsPremium(): ?bool
+    public function getIsPremium(): ?true
     {
         return $this->isPremium;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getAddedToAttachmentMenu(): ?bool
+    public function getAddedToAttachmentMenu(): ?true
     {
         return $this->addedToAttachmentMenu;
     }

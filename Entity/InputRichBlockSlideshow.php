@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockSlideshow
 {
     /**
-     * @param string $type Type of the block, always "slideshow"
+     * @param string $type Type of the block, always “slideshow”
      * @param InputRichBlock[] $blocks Elements of the slideshow
      * @param RichBlockCaption|null $caption Optional. Caption of the block
     */

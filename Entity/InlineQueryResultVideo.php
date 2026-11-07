@@ -15,7 +15,7 @@ final class InlineQueryResultVideo
      * @param string $type Type of the result, must be video
      * @param string $id Unique identifier for this result, 1-64 bytes
      * @param string $videoUrl A valid URL for the embedded video player or video file
-     * @param string $mimeType MIME type of the content of the video URL, "text/html" or "video/mp4"
+     * @param string $mimeType MIME type of the content of the video URL, “text/html” or “video/mp4”
      * @param string $thumbnailUrl URL of the thumbnail (JPEG only) for the video
      * @param string $title Title for the result
      * @param string|null $caption Optional. Caption of the video to be sent, 0-1024 characters after entities parsing

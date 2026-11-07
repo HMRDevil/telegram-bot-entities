@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichBlockDocument
 {
     /**
-     * @param string $type Type of the block, always "document"
+     * @param string $type Type of the block, always “document”
      * @param Document $document The document
      * @param RichBlockCaption|null $caption Optional. Caption of the block
     */

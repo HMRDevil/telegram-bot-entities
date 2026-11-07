@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RevenueWithdrawalStateSucceeded
 {
     /**
-     * @param string $type Type of the state, always "succeeded"
+     * @param string $type Type of the state, always “succeeded”
      * @param int $date Date the withdrawal was completed in Unix time
      * @param string $url An HTTPS URL that can be used to see transaction details
     */

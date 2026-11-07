@@ -16,8 +16,8 @@ final class Gift
      * @param Sticker $sticker The sticker that represents the gift
      * @param int $starCount The number of Telegram Stars that must be paid to send the sticker
      * @param int|null $upgradeStarCount Optional. The number of Telegram Stars that must be paid to upgrade the gift to a unique one
-     * @param bool|null $isPremium Optional. True, if the gift can only be purchased by Telegram Premium subscribers
-     * @param bool|null $hasColors Optional. True, if the gift can be used (after being upgraded) to customize a user's appearance
+     * @param true|null $isPremium Optional. True, if the gift can only be purchased by Telegram Premium subscribers
+     * @param true|null $hasColors Optional. True, if the gift can be used (after being upgraded) to customize a user's appearance
      * @param int|null $totalCount Optional. The total number of gifts of this type that can be sent by all users; for limited gifts only
      * @param int|null $remainingCount Optional. The number of remaining gifts of this type that can be sent by all users; for limited gifts only
      * @param int|null $personalTotalCount Optional. The total number of gifts of this type that can be sent by the bot; for limited gifts only
@@ -32,8 +32,8 @@ final class Gift
          private Sticker $sticker,
          private int $starCount,
          private ?int $upgradeStarCount = null,
-         private ?bool $isPremium = null,
-         private ?bool $hasColors = null,
+         private ?true $isPremium = null,
+         private ?true $hasColors = null,
          private ?int $totalCount = null,
          private ?int $remainingCount = null,
          private ?int $personalTotalCount = null,
@@ -76,17 +76,17 @@ final class Gift
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsPremium(): ?bool
+    public function getIsPremium(): ?true
     {
         return $this->isPremium;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getHasColors(): ?bool
+    public function getHasColors(): ?true
     {
         return $this->hasColors;
     }

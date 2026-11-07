@@ -12,147 +12,147 @@ namespace Phppride\TelegramBot\Entity;
 final class BusinessBotRights
 {
     /**
-     * @param bool|null $canReply Optional. True, if the bot can send and edit messages in the private chats that had incoming messages in the last 24 hours
-     * @param bool|null $canReadMessages Optional. True, if the bot can mark incoming private messages as read
-     * @param bool|null $canDeleteSentMessages Optional. True, if the bot can delete messages sent by the bot
-     * @param bool|null $canDeleteAllMessages Optional. True, if the bot can delete all private messages in managed chats
-     * @param bool|null $canEditName Optional. True, if the bot can edit the first and last name of the business account
-     * @param bool|null $canEditBio Optional. True, if the bot can edit the bio of the business account
-     * @param bool|null $canEditProfilePhoto Optional. True, if the bot can edit the profile photo of the business account
-     * @param bool|null $canEditUsername Optional. True, if the bot can edit the username of the business account
-     * @param bool|null $canChangeGiftSettings Optional. True, if the bot can change the privacy settings pertaining to gifts for the business account
-     * @param bool|null $canViewGiftsAndStars Optional. True, if the bot can view gifts and the amount of Telegram Stars owned by the business account
-     * @param bool|null $canConvertGiftsToStars Optional. True, if the bot can convert regular gifts owned by the business account to Telegram Stars
-     * @param bool|null $canTransferAndUpgradeGifts Optional. True, if the bot can transfer and upgrade gifts owned by the business account
-     * @param bool|null $canTransferStars Optional. True, if the bot can transfer Telegram Stars received by the business account to its own account, or use them to upgrade and transfer gifts
-     * @param bool|null $canManageStories Optional. True, if the bot can post, edit and delete stories on behalf of the business account
+     * @param true|null $canReply Optional. True, if the bot can send and edit messages in the private chats that had incoming messages in the last 24 hours
+     * @param true|null $canReadMessages Optional. True, if the bot can mark incoming private messages as read
+     * @param true|null $canDeleteSentMessages Optional. True, if the bot can delete messages sent by the bot
+     * @param true|null $canDeleteAllMessages Optional. True, if the bot can delete all private messages in managed chats
+     * @param true|null $canEditName Optional. True, if the bot can edit the first and last name of the business account
+     * @param true|null $canEditBio Optional. True, if the bot can edit the bio of the business account
+     * @param true|null $canEditProfilePhoto Optional. True, if the bot can edit the profile photo of the business account
+     * @param true|null $canEditUsername Optional. True, if the bot can edit the username of the business account
+     * @param true|null $canChangeGiftSettings Optional. True, if the bot can change the privacy settings pertaining to gifts for the business account
+     * @param true|null $canViewGiftsAndStars Optional. True, if the bot can view gifts and the amount of Telegram Stars owned by the business account
+     * @param true|null $canConvertGiftsToStars Optional. True, if the bot can convert regular gifts owned by the business account to Telegram Stars
+     * @param true|null $canTransferAndUpgradeGifts Optional. True, if the bot can transfer and upgrade gifts owned by the business account
+     * @param true|null $canTransferStars Optional. True, if the bot can transfer Telegram Stars received by the business account to its own account, or use them to upgrade and transfer gifts
+     * @param true|null $canManageStories Optional. True, if the bot can post, edit and delete stories on behalf of the business account
     */
     public function __construct
     (
-         private ?bool $canReply = null,
-         private ?bool $canReadMessages = null,
-         private ?bool $canDeleteSentMessages = null,
-         private ?bool $canDeleteAllMessages = null,
-         private ?bool $canEditName = null,
-         private ?bool $canEditBio = null,
-         private ?bool $canEditProfilePhoto = null,
-         private ?bool $canEditUsername = null,
-         private ?bool $canChangeGiftSettings = null,
-         private ?bool $canViewGiftsAndStars = null,
-         private ?bool $canConvertGiftsToStars = null,
-         private ?bool $canTransferAndUpgradeGifts = null,
-         private ?bool $canTransferStars = null,
-         private ?bool $canManageStories = null
+         private ?true $canReply = null,
+         private ?true $canReadMessages = null,
+         private ?true $canDeleteSentMessages = null,
+         private ?true $canDeleteAllMessages = null,
+         private ?true $canEditName = null,
+         private ?true $canEditBio = null,
+         private ?true $canEditProfilePhoto = null,
+         private ?true $canEditUsername = null,
+         private ?true $canChangeGiftSettings = null,
+         private ?true $canViewGiftsAndStars = null,
+         private ?true $canConvertGiftsToStars = null,
+         private ?true $canTransferAndUpgradeGifts = null,
+         private ?true $canTransferStars = null,
+         private ?true $canManageStories = null
     ) {}
     
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanReply(): ?bool
+    public function getCanReply(): ?true
     {
         return $this->canReply;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanReadMessages(): ?bool
+    public function getCanReadMessages(): ?true
     {
         return $this->canReadMessages;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanDeleteSentMessages(): ?bool
+    public function getCanDeleteSentMessages(): ?true
     {
         return $this->canDeleteSentMessages;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanDeleteAllMessages(): ?bool
+    public function getCanDeleteAllMessages(): ?true
     {
         return $this->canDeleteAllMessages;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanEditName(): ?bool
+    public function getCanEditName(): ?true
     {
         return $this->canEditName;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanEditBio(): ?bool
+    public function getCanEditBio(): ?true
     {
         return $this->canEditBio;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanEditProfilePhoto(): ?bool
+    public function getCanEditProfilePhoto(): ?true
     {
         return $this->canEditProfilePhoto;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanEditUsername(): ?bool
+    public function getCanEditUsername(): ?true
     {
         return $this->canEditUsername;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanChangeGiftSettings(): ?bool
+    public function getCanChangeGiftSettings(): ?true
     {
         return $this->canChangeGiftSettings;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanViewGiftsAndStars(): ?bool
+    public function getCanViewGiftsAndStars(): ?true
     {
         return $this->canViewGiftsAndStars;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanConvertGiftsToStars(): ?bool
+    public function getCanConvertGiftsToStars(): ?true
     {
         return $this->canConvertGiftsToStars;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanTransferAndUpgradeGifts(): ?bool
+    public function getCanTransferAndUpgradeGifts(): ?true
     {
         return $this->canTransferAndUpgradeGifts;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanTransferStars(): ?bool
+    public function getCanTransferStars(): ?true
     {
         return $this->canTransferStars;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanManageStories(): ?bool
+    public function getCanManageStories(): ?true
     {
         return $this->canManageStories;
     }

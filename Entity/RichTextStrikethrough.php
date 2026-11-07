@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextStrikethrough
 {
     /**
-     * @param string $type Type of the rich text, always "strikethrough"
+     * @param string $type Type of the rich text, always “strikethrough”
      * @param RichText $text The text
     */
     public function __construct

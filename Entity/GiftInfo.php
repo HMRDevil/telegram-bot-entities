@@ -16,11 +16,11 @@ final class GiftInfo
      * @param string|null $ownedGiftId Optional. Unique identifier of the received gift for the bot; only present for gifts received on behalf of business accounts
      * @param int|null $convertStarCount Optional. Number of Telegram Stars that can be claimed by the receiver by converting the gift; omitted if conversion to Telegram Stars is impossible
      * @param int|null $prepaidUpgradeStarCount Optional. Number of Telegram Stars that were prepaid for the ability to upgrade the gift
-     * @param bool|null $isUpgradeSeparate Optional. True, if the gift's upgrade was purchased after the gift was sent
-     * @param bool|null $canBeUpgraded Optional. True, if the gift can be upgraded to a unique gift
+     * @param true|null $isUpgradeSeparate Optional. True, if the gift's upgrade was purchased after the gift was sent
+     * @param true|null $canBeUpgraded Optional. True, if the gift can be upgraded to a unique gift
      * @param string|null $text Optional. Text of the message that was added to the gift
      * @param MessageEntity[]|null $entities Optional. Special entities that appear in the text
-     * @param bool|null $isPrivate Optional. True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone will be able to see them
+     * @param true|null $isPrivate Optional. True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone will be able to see them
      * @param int|null $uniqueGiftNumber Optional. Unique number reserved for this gift when upgraded. See the number field in UniqueGift.
     */
     public function __construct
@@ -29,11 +29,11 @@ final class GiftInfo
          private ?string $ownedGiftId = null,
          private ?int $convertStarCount = null,
          private ?int $prepaidUpgradeStarCount = null,
-         private ?bool $isUpgradeSeparate = null,
-         private ?bool $canBeUpgraded = null,
+         private ?true $isUpgradeSeparate = null,
+         private ?true $canBeUpgraded = null,
          private ?string $text = null,
          private ?array $entities = null,
-         private ?bool $isPrivate = null,
+         private ?true $isPrivate = null,
          private ?int $uniqueGiftNumber = null
     ) {}
     
@@ -70,17 +70,17 @@ final class GiftInfo
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsUpgradeSeparate(): ?bool
+    public function getIsUpgradeSeparate(): ?true
     {
         return $this->isUpgradeSeparate;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getCanBeUpgraded(): ?bool
+    public function getCanBeUpgraded(): ?true
     {
         return $this->canBeUpgraded;
     }
@@ -102,9 +102,9 @@ final class GiftInfo
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsPrivate(): ?bool
+    public function getIsPrivate(): ?true
     {
         return $this->isPrivate;
     }

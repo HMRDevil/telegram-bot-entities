@@ -19,9 +19,9 @@ final class UniqueGift
      * @param UniqueGiftModel $model Model of the gift
      * @param UniqueGiftSymbol $symbol Symbol of the gift
      * @param UniqueGiftBackdrop $backdrop Backdrop of the gift
-     * @param bool|null $isPremium Optional. True, if the original regular gift was exclusively purchaseable by Telegram Premium subscribers
-     * @param bool|null $isBurned Optional. True, if the gift was used to craft another gift and isn't available anymore
-     * @param bool|null $isFromBlockchain Optional. True, if the gift is assigned from the TON blockchain and can't be resold or transferred in Telegram
+     * @param true|null $isPremium Optional. True, if the original regular gift was exclusively purchaseable by Telegram Premium subscribers
+     * @param true|null $isBurned Optional. True, if the gift was used to craft another gift and isn't available anymore
+     * @param true|null $isFromBlockchain Optional. True, if the gift is assigned from the TON blockchain and can't be resold or transferred in Telegram
      * @param UniqueGiftColors|null $colors Optional. The color scheme that can be used by the gift's owner for the chat's name, replies to messages and link previews; for business account gifts and gifts that are currently on sale only
      * @param Chat|null $publisherChat Optional. Information about the chat that published the gift
     */
@@ -34,9 +34,9 @@ final class UniqueGift
          private UniqueGiftModel $model,
          private UniqueGiftSymbol $symbol,
          private UniqueGiftBackdrop $backdrop,
-         private ?bool $isPremium = null,
-         private ?bool $isBurned = null,
-         private ?bool $isFromBlockchain = null,
+         private ?true $isPremium = null,
+         private ?true $isBurned = null,
+         private ?true $isFromBlockchain = null,
          private ?UniqueGiftColors $colors = null,
          private ?Chat $publisherChat = null
     ) {}
@@ -98,25 +98,25 @@ final class UniqueGift
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsPremium(): ?bool
+    public function getIsPremium(): ?true
     {
         return $this->isPremium;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsBurned(): ?bool
+    public function getIsBurned(): ?true
     {
         return $this->isBurned;
     }
 
     /**
-     * @return bool|null
+     * @return true|null
      */
-    public function getIsFromBlockchain(): ?bool
+    public function getIsFromBlockchain(): ?true
     {
         return $this->isFromBlockchain;
     }

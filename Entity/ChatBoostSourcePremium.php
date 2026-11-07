@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class ChatBoostSourcePremium
 {
     /**
-     * @param string $source Source of the boost, always "premium"
+     * @param string $source Source of the boost, always “premium”
      * @param User $user User that boosted the chat
     */
     public function __construct

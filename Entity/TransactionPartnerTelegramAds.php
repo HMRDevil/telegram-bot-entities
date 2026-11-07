@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class TransactionPartnerTelegramAds
 {
     /**
-     * @param string $type Type of the transaction partner, always "telegram_ads"
+     * @param string $type Type of the transaction partner, always “telegram_ads”
     */
     public function __construct
     (

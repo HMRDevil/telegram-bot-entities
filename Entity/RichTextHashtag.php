@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextHashtag
 {
     /**
-     * @param string $type Type of the rich text, always "hashtag"
+     * @param string $type Type of the rich text, always “hashtag”
      * @param RichText $text The text
      * @param string $hashtag The hashtag
     */

@@ -6,6 +6,7 @@ namespace Phppride\TelegramBot\Entity;
 
 /**
  * This object represents one row of the high scores table for a game.
+ * And that's about all we've got for now.If you've got any questions, please check out our Bot FAQ »
  *
  * @see https://core.telegram.org/bots/api#gamehighscore
  */

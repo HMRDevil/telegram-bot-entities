@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class BackgroundFillGradient
 {
     /**
-     * @param string $type Type of the background fill, always "gradient"
+     * @param string $type Type of the background fill, always “gradient”
      * @param int $topColor Top color of the gradient in the RGB24 format
      * @param int $bottomColor Bottom color of the gradient in the RGB24 format
      * @param int $rotationAngle Clockwise rotation angle of the background fill in degrees; 0-359

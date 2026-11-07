@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockSectionHeading
 {
     /**
-     * @param string $type Type of the block, always "heading"
+     * @param string $type Type of the block, always “heading”
      * @param RichText $text Text of the block
      * @param int $size Relative size of the text font; 1-6, 1 is the largest, 6 is the smallest
     */

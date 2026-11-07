@@ -12,7 +12,7 @@ namespace Phppride\TelegramBot\Entity;
 final class ChatMemberBanned
 {
     /**
-     * @param string $status The member's status in the chat, always "kicked"
+     * @param string $status The member's status in the chat, always “kicked”
      * @param User $user Information about the user
      * @param int $untilDate Date when restrictions will be lifted for this user; Unix time. If 0, then the user is banned forever.
     */

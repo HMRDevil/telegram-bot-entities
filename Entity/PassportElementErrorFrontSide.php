@@ -13,7 +13,7 @@ final class PassportElementErrorFrontSide
 {
     /**
      * @param string $source Error source, must be front_side
-     * @param string $type The section of the user's Telegram Passport which has the issue, one of "passport", "driver_license", "identity_card", "internal_passport"
+     * @param string $type The section of the user's Telegram Passport which has the issue, one of “passport”, “driver_license”, “identity_card”, “internal_passport”
      * @param string $fileHash Base64-encoded hash of the file with the front side of the document
      * @param string $message Error message
     */
