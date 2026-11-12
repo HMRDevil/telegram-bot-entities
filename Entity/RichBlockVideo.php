@@ -12,14 +12,17 @@ namespace Phppride\TelegramBot\Entity;
 final class RichBlockVideo
 {
     /**
-     * @param string $type Type of the block, always “video”
+     * @var string $type Type of the block, always “video”
+     */
+    private string $type = 'video';
+
+    /**
      * @param Video $video The video
      * @param true|null $hasSpoiler Optional. True, if the media preview is covered by a spoiler animation
      * @param RichBlockCaption|null $caption Optional. Caption of the block
     */
     public function __construct
     (
-         private string $type,
          private Video $video,
          private ?true $hasSpoiler = null,
          private ?RichBlockCaption $caption = null

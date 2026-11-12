@@ -12,12 +12,9 @@ namespace Phppride\TelegramBot\Entity;
 final class ReactionTypePaid
 {
     /**
-     * @param string $type Type of the reaction, always “paid”
-    */
-    public function __construct
-    (
-         private string $type
-    ) {}
+     * @var string $type Type of the reaction, always “paid”
+     */
+    private string $type = 'paid';
     
     /**
      * @return string

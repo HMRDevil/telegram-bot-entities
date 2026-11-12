@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class BackgroundTypePattern
 {
     /**
-     * @param string $type Type of the background, always “pattern”
+     * @var string $type Type of the background, always “pattern”
+     */
+    private string $type = 'pattern';
+
+    /**
      * @param Document $document Document with the pattern
      * @param BackgroundFill $fill The background fill that is combined with the pattern
      * @param int $intensity Intensity of the pattern when it is shown above the filled background; 0-100
@@ -21,7 +25,6 @@ final class BackgroundTypePattern
     */
     public function __construct
     (
-         private string $type,
          private Document $document,
          private BackgroundFill $fill,
          private int $intensity,

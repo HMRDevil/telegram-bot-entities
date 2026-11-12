@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextMathematicalExpression
 {
     /**
-     * @param string $type Type of the rich text, always “mathematical_expression”
+     * @var string $type Type of the rich text, always “mathematical_expression”
+     */
+    private string $type = 'mathematical_expression';
+
+    /**
      * @param string $expression The expression in LaTeX format
     */
     public function __construct
     (
-         private string $type,
          private string $expression
     ) {}
     

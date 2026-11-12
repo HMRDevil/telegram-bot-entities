@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class InlineQueryResultAudio
 {
     /**
-     * @param string $type Type of the result, must be audio
+     * @var string $type Type of the result, must be audio
+     */
+    private string $type = 'audio';
+
+    /**
      * @param string $id Unique identifier for this result, 1-64 bytes
      * @param string $audioUrl A valid URL for the audio file
      * @param string $title Title
@@ -26,7 +30,6 @@ final class InlineQueryResultAudio
     */
     public function __construct
     (
-         private string $type,
          private string $id,
          private string $audioUrl,
          private string $title,

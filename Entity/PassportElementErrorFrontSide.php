@@ -12,14 +12,17 @@ namespace Phppride\TelegramBot\Entity;
 final class PassportElementErrorFrontSide
 {
     /**
-     * @param string $source Error source, must be front_side
+     * @var string $source Error source, must be front_side
+     */
+    private string $source = 'front_side';
+
+    /**
      * @param string $type The section of the user's Telegram Passport which has the issue, one of “passport”, “driver_license”, “identity_card”, “internal_passport”
      * @param string $fileHash Base64-encoded hash of the file with the front side of the document
      * @param string $message Error message
     */
     public function __construct
     (
-         private string $source,
          private string $type,
          private string $fileHash,
          private string $message

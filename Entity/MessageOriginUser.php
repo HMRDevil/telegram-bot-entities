@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class MessageOriginUser
 {
     /**
-     * @param string $type Type of the message origin, always “user”
+     * @var string $type Type of the message origin, always “user”
+     */
+    private string $type = 'user';
+
+    /**
      * @param int $date Date the message was sent originally in Unix time
      * @param User $senderUser User that sent the message originally
     */
     public function __construct
     (
-         private string $type,
          private int $date,
          private User $senderUser
     ) {}

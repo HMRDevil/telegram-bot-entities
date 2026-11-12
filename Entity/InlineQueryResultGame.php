@@ -12,14 +12,17 @@ namespace Phppride\TelegramBot\Entity;
 final class InlineQueryResultGame
 {
     /**
-     * @param string $type Type of the result, must be game
+     * @var string $type Type of the result, must be game
+     */
+    private string $type = 'game';
+
+    /**
      * @param string $id Unique identifier for this result, 1-64 bytes
      * @param string $gameShortName Short name of the game
      * @param InlineKeyboardMarkup|null $replyMarkup Optional. Inline keyboard attached to the message
     */
     public function __construct
     (
-         private string $type,
          private string $id,
          private string $gameShortName,
          private ?InlineKeyboardMarkup $replyMarkup = null

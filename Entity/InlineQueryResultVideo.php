@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class InlineQueryResultVideo
 {
     /**
-     * @param string $type Type of the result, must be video
+     * @var string $type Type of the result, must be video
+     */
+    private string $type = 'video';
+
+    /**
      * @param string $id Unique identifier for this result, 1-64 bytes
      * @param string $videoUrl A valid URL for the embedded video player or video file
      * @param string $mimeType MIME type of the content of the video URL, “text/html” or “video/mp4”
@@ -31,7 +35,6 @@ final class InlineQueryResultVideo
     */
     public function __construct
     (
-         private string $type,
          private string $id,
          private string $videoUrl,
          private string $mimeType,

@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class InlineQueryResultCachedPhoto
 {
     /**
-     * @param string $type Type of the result, must be photo
+     * @var string $type Type of the result, must be photo
+     */
+    private string $type = 'photo';
+
+    /**
      * @param string $id Unique identifier for this result, 1-64 bytes
      * @param string $photoFileId A valid file identifier of the photo
      * @param string|null $title Optional. Title for the result
@@ -26,7 +30,6 @@ final class InlineQueryResultCachedPhoto
     */
     public function __construct
     (
-         private string $type,
          private string $id,
          private string $photoFileId,
          private ?string $title = null,

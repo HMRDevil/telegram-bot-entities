@@ -12,14 +12,17 @@ namespace Phppride\TelegramBot\Entity;
 final class RichBlockPhoto
 {
     /**
-     * @param string $type Type of the block, always “photo”
+     * @var string $type Type of the block, always “photo”
+     */
+    private string $type = 'photo';
+
+    /**
      * @param PhotoSize[] $photo Available sizes of the photo
      * @param true|null $hasSpoiler Optional. True, if the media preview is covered by a spoiler animation
      * @param RichBlockCaption|null $caption Optional. Caption of the block
     */
     public function __construct
     (
-         private string $type,
          private array $photo,
          private ?true $hasSpoiler = null,
          private ?RichBlockCaption $caption = null

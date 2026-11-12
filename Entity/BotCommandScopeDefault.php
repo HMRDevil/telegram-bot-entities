@@ -12,13 +12,10 @@ namespace Phppride\TelegramBot\Entity;
 final class BotCommandScopeDefault
 {
     /**
-     * @param string $type Scope type, must be default
-    */
-    public function __construct
-    (
-         private string $type
-    ) {}
-    
+     * @var string $type Scope type, must be default
+     */
+    private string $type = 'default';
+
     /**
      * @return string
      */

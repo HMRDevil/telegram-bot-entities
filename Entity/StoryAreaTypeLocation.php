@@ -12,14 +12,17 @@ namespace Phppride\TelegramBot\Entity;
 final class StoryAreaTypeLocation
 {
     /**
-     * @param string $type Type of the area, always “location”
+     * @var string $type Type of the area, always “location”
+     */
+    private string $type = 'location';
+
+    /**
      * @param float $latitude Location latitude in degrees
      * @param float $longitude Location longitude in degrees
      * @param LocationAddress|null $address Optional. Address of the location
     */
     public function __construct
     (
-         private string $type,
          private float $latitude,
          private float $longitude,
          private ?LocationAddress $address = null

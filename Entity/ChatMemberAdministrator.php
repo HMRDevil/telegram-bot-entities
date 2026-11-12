@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class ChatMemberAdministrator
 {
     /**
-     * @param string $status The member's status in the chat, always “administrator”
+     * @var string $status The member's status in the chat, always “administrator”
+     */
+    private string $status = 'administrator';
+
+    /**
      * @param User $user Information about the user
      * @param bool $canBeEdited True, if the bot is allowed to edit administrator privileges of that user
      * @param bool $isAnonymous True, if the user's presence in the chat is hidden
@@ -37,7 +41,6 @@ final class ChatMemberAdministrator
     */
     public function __construct
     (
-         private string $status,
          private User $user,
          private bool $canBeEdited,
          private bool $isAnonymous,

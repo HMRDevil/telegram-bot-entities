@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class ChatBoostSourceGiveaway
 {
     /**
-     * @param string $source Source of the boost, always “giveaway”
+     * @var string $source Source of the boost, always “giveaway”
+     */
+    private string $source = 'giveaway';
+
+    /**
      * @param int $giveawayMessageId Identifier of a message in the chat with the giveaway; the message could have been deleted already. May be 0 if the message isn't sent yet.
      * @param User|null $user Optional. User that won the prize in the giveaway if any; for Telegram Premium giveaways only
      * @param int|null $prizeStarCount Optional. The number of Telegram Stars to be split between giveaway winners; for Telegram Star giveaways only
@@ -20,7 +24,6 @@ final class ChatBoostSourceGiveaway
     */
     public function __construct
     (
-         private string $source,
          private int $giveawayMessageId,
          private ?User $user = null,
          private ?int $prizeStarCount = null,

@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class ChatBoostSourceGiftCode
 {
     /**
-     * @param string $source Source of the boost, always “gift_code”
+     * @var string $source Source of the boost, always “gift_code”
+     */
+    private string $source = 'gift_code';
+
+    /**
      * @param User $user User for which the gift code was created
     */
     public function __construct
     (
-         private string $source,
          private User $user
     ) {}
     

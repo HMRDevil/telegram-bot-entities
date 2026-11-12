@@ -12,14 +12,17 @@ namespace Phppride\TelegramBot\Entity;
 final class PassportElementErrorUnspecified
 {
     /**
-     * @param string $source Error source, must be unspecified
+     * @var string $source Error source, must be unspecified
+     */
+    private string $source = 'unspecified';
+
+    /**
      * @param string $type Type of element of the user's Telegram Passport which has the issue
      * @param string $elementHash Base64-encoded element hash
      * @param string $message Error message
     */
     public function __construct
     (
-         private string $source,
          private string $type,
          private string $elementHash,
          private string $message

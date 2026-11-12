@@ -12,14 +12,17 @@ namespace Phppride\TelegramBot\Entity;
 final class InputMediaLocation
 {
     /**
-     * @param string $type Type of the media, must be location
+     * @var string $type Type of the media, must be location
+     */
+    private string $type = 'location';
+
+    /**
      * @param float $latitude Latitude of the location
      * @param float $longitude Longitude of the location
      * @param float|null $horizontalAccuracy Optional. The radius of uncertainty for the location, measured in meters; 0-1500
     */
     public function __construct
     (
-         private string $type,
          private float $latitude,
          private float $longitude,
          private ?float $horizontalAccuracy = null

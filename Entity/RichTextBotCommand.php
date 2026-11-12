@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextBotCommand
 {
     /**
-     * @param string $type Type of the rich text, always “bot_command”
+     * @var string $type Type of the rich text, always “bot_command”
+     */
+    private string $type = 'bot_command';
+
+    /**
      * @param RichText $text The text
      * @param string $botCommand The bot command
     */
     public function __construct
     (
-         private string $type,
          private RichText $text,
          private string $botCommand
     ) {}

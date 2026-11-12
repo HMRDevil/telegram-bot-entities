@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class BackgroundTypeWallpaper
 {
     /**
-     * @param string $type Type of the background, always “wallpaper”
+     * @var string $type Type of the background, always “wallpaper”
+     */
+    private string $type = 'wallpaper';
+
+    /**
      * @param Document $document Document with the wallpaper
      * @param int $darkThemeDimming Dimming of the background in dark themes, as a percentage; 0-100
      * @param true|null $isBlurred Optional. True, if the wallpaper is downscaled to fit in a 450x450 square and then box-blurred with radius 12
@@ -20,7 +24,6 @@ final class BackgroundTypeWallpaper
     */
     public function __construct
     (
-         private string $type,
          private Document $document,
          private int $darkThemeDimming,
          private ?true $isBlurred = null,

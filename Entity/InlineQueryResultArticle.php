@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class InlineQueryResultArticle
 {
     /**
-     * @param string $type Type of the result, must be article
+     * @var string $type Type of the result, must be article
+     */
+    private string $type = 'article';
+
+    /**
      * @param string $id Unique identifier for this result, 1-64 Bytes
      * @param string $title Title of the result
      * @param InputMessageContent $inputMessageContent Content of the message to be sent
@@ -25,7 +29,6 @@ final class InlineQueryResultArticle
     */
     public function __construct
     (
-         private string $type,
          private string $id,
          private string $title,
          private InputMessageContent $inputMessageContent,

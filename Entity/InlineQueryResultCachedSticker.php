@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class InlineQueryResultCachedSticker
 {
     /**
-     * @param string $type Type of the result, must be sticker
+     * @var string $type Type of the result, must be sticker
+     */
+    private string $type = 'sticker';
+
+    /**
      * @param string $id Unique identifier for this result, 1-64 bytes
      * @param string $stickerFileId A valid file identifier of the sticker
      * @param InlineKeyboardMarkup|null $replyMarkup Optional. Inline keyboard attached to the message
@@ -20,7 +24,6 @@ final class InlineQueryResultCachedSticker
     */
     public function __construct
     (
-         private string $type,
          private string $id,
          private string $stickerFileId,
          private ?InlineKeyboardMarkup $replyMarkup = null,

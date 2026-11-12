@@ -12,12 +12,9 @@ namespace Phppride\TelegramBot\Entity;
 final class RichBlockDivider
 {
     /**
-     * @param string $type Type of the block, always “divider”
-    */
-    public function __construct
-    (
-         private string $type
-    ) {}
+     * @var string $type Type of the block, always “divider”
+     */
+    private string $type = 'divider';
     
     /**
      * @return string

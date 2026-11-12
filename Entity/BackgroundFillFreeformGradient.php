@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class BackgroundFillFreeformGradient
 {
     /**
-     * @param string $type Type of the background fill, always “freeform_gradient”
+     * @var string $type Type of the background fill, always “freeform_gradient”
+     */
+    private string $type = 'freeform_gradient';
+
+    /**
      * @param Integer[] $colors A list of the 3 or 4 base colors that are used to generate the freeform gradient in the RGB24 format
     */
     public function __construct
     (
-         private string $type,
          private array $colors
     ) {}
     

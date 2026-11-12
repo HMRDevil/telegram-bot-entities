@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class OwnedGiftUnique
 {
     /**
-     * @param string $type Type of the gift, always “unique”
+     * @var string $type Type of the gift, always “unique”
+     */
+    private string $type = 'unique';
+
+    /**
      * @param UniqueGift $gift Information about the unique gift
      * @param int $sendDate Date the gift was sent in Unix time
      * @param string|null $ownedGiftId Optional. Unique identifier of the received gift for the bot; for gifts received on behalf of business accounts only
@@ -24,7 +28,6 @@ final class OwnedGiftUnique
     */
     public function __construct
     (
-         private string $type,
          private UniqueGift $gift,
          private int $sendDate,
          private ?string $ownedGiftId = null,

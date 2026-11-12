@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class InlineQueryResultVenue
 {
     /**
-     * @param string $type Type of the result, must be venue
+     * @var string $type Type of the result, must be venue
+     */
+    private string $type = 'venue';
+
+    /**
      * @param string $id Unique identifier for this result, 1-64 Bytes
      * @param float $latitude Latitude of the venue location in degrees
      * @param float $longitude Longitude of the venue location in degrees
@@ -30,7 +34,6 @@ final class InlineQueryResultVenue
     */
     public function __construct
     (
-         private string $type,
          private string $id,
          private float $latitude,
          private float $longitude,

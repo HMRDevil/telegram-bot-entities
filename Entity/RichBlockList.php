@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class RichBlockList
 {
     /**
-     * @param string $type Type of the block, always “list”
+     * @var string $type Type of the block, always “list”
+     */
+    private string $type = 'list';
+
+    /**
      * @param RichBlockListItem[] $items Items of the list
     */
     public function __construct
     (
-         private string $type,
          private array $items
     ) {}
     

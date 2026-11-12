@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockPreformatted
 {
     /**
-     * @param string $type Type of the block, always “pre”
+     * @var string $type Type of the block, always “pre”
+     */
+    private string $type = 'pre';
+
+    /**
      * @param RichText $text Text of the block
      * @param string|null $language Optional. The programming language of the text
     */
     public function __construct
     (
-         private string $type,
          private RichText $text,
          private ?string $language = null
     ) {}

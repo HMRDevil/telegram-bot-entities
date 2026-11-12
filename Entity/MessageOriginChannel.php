@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class MessageOriginChannel
 {
     /**
-     * @param string $type Type of the message origin, always “channel”
+     * @var string $type Type of the message origin, always “channel”
+     */
+    private string $type = 'channel';
+
+    /**
      * @param int $date Date the message was sent originally in Unix time
      * @param Chat $chat Channel chat to which the message was originally sent
      * @param int $messageId Unique message identifier inside the chat
@@ -20,7 +24,6 @@ final class MessageOriginChannel
     */
     public function __construct
     (
-         private string $type,
          private int $date,
          private Chat $chat,
          private int $messageId,

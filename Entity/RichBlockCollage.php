@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class RichBlockCollage
 {
     /**
-     * @param string $type Type of the block, always “collage”
+     * @var string $type Type of the block, always “collage”
+     */
+    private string $type = 'collage';
+
+    /**
      * @param RichBlock[] $blocks Elements of the collage
      * @param RichBlockCaption|null $caption Optional. Caption of the block
     */
     public function __construct
     (
-         private string $type,
          private array $blocks,
          private ?RichBlockCaption $caption = null
     ) {}

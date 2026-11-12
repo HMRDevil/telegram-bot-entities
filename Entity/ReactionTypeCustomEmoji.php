@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class ReactionTypeCustomEmoji
 {
     /**
-     * @param string $type Type of the reaction, always “custom_emoji”
+     * @var string $type Type of the reaction, always “custom_emoji”
+     */
+    private string $type = 'custom_emoji';
+
+    /**
      * @param string $customEmojiId Custom emoji identifier
     */
     public function __construct
     (
-         private string $type,
          private string $customEmojiId
     ) {}
     

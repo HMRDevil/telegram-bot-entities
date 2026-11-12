@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockVoiceNote
 {
     /**
-     * @param string $type Type of the block, always “voice_note”
+     * @var string $type Type of the block, always “voice_note”
+     */
+    private string $type = 'voice_note';
+
+    /**
      * @param InputMediaVoiceNote $voiceNote The voice note. Caption is ignored.
      * @param RichBlockCaption|null $caption Optional. Caption of the block
     */
     public function __construct
     (
-         private string $type,
          private InputMediaVoiceNote $voiceNote,
          private ?RichBlockCaption $caption = null
     ) {}

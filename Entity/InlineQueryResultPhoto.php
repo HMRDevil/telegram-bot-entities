@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class InlineQueryResultPhoto
 {
     /**
-     * @param string $type Type of the result, must be photo
+     * @var string $type Type of the result, must be photo
+     */
+    private string $type = 'photo';
+
+    /**
      * @param string $id Unique identifier for this result, 1-64 bytes
      * @param string $photoUrl A valid URL of the photo. Photo must be in JPEG format. Photo size must not exceed 5MB.
      * @param string $thumbnailUrl URL of the thumbnail for the photo
@@ -29,7 +33,6 @@ final class InlineQueryResultPhoto
     */
     public function __construct
     (
-         private string $type,
          private string $id,
          private string $photoUrl,
          private string $thumbnailUrl,

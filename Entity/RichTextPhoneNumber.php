@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextPhoneNumber
 {
     /**
-     * @param string $type Type of the rich text, always “phone_number”
+     * @var string $type Type of the rich text, always “phone_number”
+     */
+    private string $type = 'phone_number';
+
+    /**
      * @param RichText $text The text
      * @param string $phoneNumber The phone number
     */
     public function __construct
     (
-         private string $type,
          private RichText $text,
          private string $phoneNumber
     ) {}

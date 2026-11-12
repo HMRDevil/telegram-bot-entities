@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class MessageOriginHiddenUser
 {
     /**
-     * @param string $type Type of the message origin, always “hidden_user”
+     * @var string $type Type of the message origin, always “hidden_user”
+     */
+    private string $type = 'hidden_user';
+
+    /**
      * @param int $date Date the message was sent originally in Unix time
      * @param string $senderUserName Name of the user that sent the message originally
     */
     public function __construct
     (
-         private string $type,
          private int $date,
          private string $senderUserName
     ) {}

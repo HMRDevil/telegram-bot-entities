@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextAnchorLink
 {
     /**
-     * @param string $type Type of the rich text, always “anchor_link”
+     * @var string $type Type of the rich text, always “anchor_link”
+     */
+    private string $type = 'anchor_link';
+
+    /**
      * @param RichText $text The link text
      * @param string $anchorName The name of the anchor. If the name is empty, then the link brings back to the top of the message.
     */
     public function __construct
     (
-         private string $type,
          private RichText $text,
          private string $anchorName
     ) {}

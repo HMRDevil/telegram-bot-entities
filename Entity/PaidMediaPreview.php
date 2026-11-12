@@ -12,14 +12,17 @@ namespace Phppride\TelegramBot\Entity;
 final class PaidMediaPreview
 {
     /**
-     * @param string $type Type of the paid media, always “preview”
+     * @var string $type Type of the paid media, always “preview”
+     */
+    private string $type = 'preview';
+
+    /**
      * @param int|null $width Optional. Media width as defined by the sender
      * @param int|null $height Optional. Media height as defined by the sender
      * @param int|null $duration Optional. Duration of the media in seconds as defined by the sender
     */
     public function __construct
     (
-         private string $type,
          private ?int $width = null,
          private ?int $height = null,
          private ?int $duration = null

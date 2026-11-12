@@ -12,14 +12,17 @@ namespace Phppride\TelegramBot\Entity;
 final class StoryAreaTypeWeather
 {
     /**
-     * @param string $type Type of the area, always “weather”
+     * @var string $type Type of the area, always “weather”
+     */
+    private string $type = 'weather';
+
+    /**
      * @param float $temperature Temperature, in degree Celsius
      * @param string $emoji Emoji representing the weather
      * @param int $backgroundColor A color of the area background in the ARGB format
     */
     public function __construct
     (
-         private string $type,
          private float $temperature,
          private string $emoji,
          private int $backgroundColor

@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class InputPaidMediaPhoto
 {
     /**
-     * @param string $type Type of the media, must be photo
+     * @var string $type Type of the media, must be photo
+     */
+    private string $type = 'photo';
+
+    /**
      * @param string $media File to send. Pass a file_id to send a file that exists on the Telegram servers (recommended), pass an HTTP URL for Telegram to get a file from the Internet, or pass “attach://<file_attach_name>” to upload a new one using multipart/form-data under <file_attach_name> name. More information on Sending Files »
     */
     public function __construct
     (
-         private string $type,
          private string $media
     ) {}
     

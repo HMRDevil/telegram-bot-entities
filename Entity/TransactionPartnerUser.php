@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class TransactionPartnerUser
 {
     /**
-     * @param string $type Type of the transaction partner, always “user”
+     * @var string $type Type of the transaction partner, always “user”
+     */
+    private string $type = 'user';
+
+    /**
      * @param string $transactionType Type of the transaction, currently one of “invoice_payment” for payments via invoices, “paid_media_payment” for payments for paid media, “gift_purchase” for gifts sent by the bot, “premium_purchase” for Telegram Premium subscriptions gifted by the bot, “business_account_transfer” for direct transfers from managed business accounts
      * @param User $user Information about the user
      * @param AffiliateInfo|null $affiliate Optional. Information about the affiliate that received a commission via this transaction. Can be available only for “invoice_payment” and “paid_media_payment” transactions.
@@ -25,7 +29,6 @@ final class TransactionPartnerUser
     */
     public function __construct
     (
-         private string $type,
          private string $transactionType,
          private User $user,
          private ?AffiliateInfo $affiliate = null,

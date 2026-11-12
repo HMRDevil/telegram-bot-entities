@@ -12,13 +12,10 @@ namespace Phppride\TelegramBot\Entity;
 final class MenuButtonCommands
 {
     /**
-     * @param string $type Type of the button, must be commands
-    */
-    public function __construct
-    (
-         private string $type
-    ) {}
-    
+     * @var string $type Type of the button, must be commands
+     */
+    private string $type = 'commands';
+
     /**
      * @return string
      */

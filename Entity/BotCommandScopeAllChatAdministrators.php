@@ -12,13 +12,10 @@ namespace Phppride\TelegramBot\Entity;
 final class BotCommandScopeAllChatAdministrators
 {
     /**
-     * @param string $type Scope type, must be all_chat_administrators
-    */
-    public function __construct
-    (
-         private string $type
-    ) {}
-    
+     * @var string $type Scope type, must be all_chat_administrators
+     */
+    private string $type = 'all_chat_administrators';
+
     /**
      * @return string
      */

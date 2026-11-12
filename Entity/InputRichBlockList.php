@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockList
 {
     /**
-     * @param string $type Type of the block, always “list”
+     * @var string $type Type of the block, always “list”
+     */
+    private string $type = 'list';
+
+    /**
      * @param InputRichBlockListItem[] $items Items of the list
     */
     public function __construct
     (
-         private string $type,
          private array $items
     ) {}
     

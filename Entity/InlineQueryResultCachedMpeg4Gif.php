@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class InlineQueryResultCachedMpeg4Gif
 {
     /**
-     * @param string $type Type of the result, must be mpeg4_gif
+     * @var string $type Type of the result, must be mpeg4_gif
+     */
+    private string $type = 'mpeg4_gif';
+
+    /**
      * @param string $id Unique identifier for this result, 1-64 bytes
      * @param string $mpeg4FileId A valid file identifier for the MPEG4 file
      * @param string|null $title Optional. Title for the result
@@ -25,7 +29,6 @@ final class InlineQueryResultCachedMpeg4Gif
     */
     public function __construct
     (
-         private string $type,
          private string $id,
          private string $mpeg4FileId,
          private ?string $title = null,

@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextMarked
 {
     /**
-     * @param string $type Type of the rich text, always “marked”
+     * @var string $type Type of the rich text, always “marked”
+     */
+    private string $type = 'marked';
+
+    /**
      * @param RichText $text The text
     */
     public function __construct
     (
-         private string $type,
          private RichText $text
     ) {}
     

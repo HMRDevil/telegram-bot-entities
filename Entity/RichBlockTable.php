@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class RichBlockTable
 {
     /**
-     * @param string $type Type of the block, always “table”
+     * @var string $type Type of the block, always “table”
+     */
+    private string $type = 'table';
+
+    /**
      * @param RichBlockTableCell[][] $cells Cells of the table
      * @param true|null $isBordered Optional. True, if the table has borders
      * @param true|null $isStriped Optional. True, if the table is striped
@@ -21,7 +25,6 @@ final class RichBlockTable
     */
     public function __construct
     (
-         private string $type,
          private array $cells,
          private ?true $isBordered = null,
          private ?true $isStriped = null,

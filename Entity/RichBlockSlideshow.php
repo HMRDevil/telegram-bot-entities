@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class RichBlockSlideshow
 {
     /**
-     * @param string $type Type of the block, always “slideshow”
+     * @var string $type Type of the block, always “slideshow”
+     */
+    private string $type = 'slideshow';
+
+    /**
      * @param RichBlock[] $blocks Elements of the slideshow
      * @param RichBlockCaption|null $caption Optional. Caption of the block
     */
     public function __construct
     (
-         private string $type,
          private array $blocks,
          private ?RichBlockCaption $caption = null
     ) {}

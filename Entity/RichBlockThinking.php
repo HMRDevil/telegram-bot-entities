@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class RichBlockThinking
 {
     /**
-     * @param string $type Type of the block, always “thinking”
+     * @var string $type Type of the block, always “thinking”
+     */
+    private string $type = 'thinking';
+
+    /**
      * @param RichText $text Text of the block. See https://t.me/addemoji/AIActions for examples of custom emoji that are recommended for usage in the block.
     */
     public function __construct
     (
-         private string $type,
          private RichText $text
     ) {}
     

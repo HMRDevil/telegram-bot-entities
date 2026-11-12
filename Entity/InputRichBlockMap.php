@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockMap
 {
     /**
-     * @param string $type Type of the block, always “map”
+     * @var string $type Type of the block, always “map”
+     */
+    private string $type = 'map';
+
+    /**
      * @param Location $location Location of the center of the map
      * @param int|null $zoom Optional. Map zoom level; 0-24
      * @param int|null $width Optional. Map width; 0-10000
@@ -21,7 +25,6 @@ final class InputRichBlockMap
     */
     public function __construct
     (
-         private string $type,
          private Location $location,
          private ?int $zoom = null,
          private ?int $width = null,

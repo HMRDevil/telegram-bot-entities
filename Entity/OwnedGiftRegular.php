@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class OwnedGiftRegular
 {
     /**
-     * @param string $type Type of the gift, always “regular”
+     * @var string $type Type of the gift, always “regular”
+     */
+    private string $type = 'regular';
+
+    /**
      * @param Gift $gift Information about the regular gift
      * @param int $sendDate Date the gift was sent in Unix time
      * @param string|null $ownedGiftId Optional. Unique identifier of the gift for the bot; for gifts received on behalf of business accounts only
@@ -30,7 +34,6 @@ final class OwnedGiftRegular
     */
     public function __construct
     (
-         private string $type,
          private Gift $gift,
          private int $sendDate,
          private ?string $ownedGiftId = null,

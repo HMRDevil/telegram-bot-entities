@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class PaidMediaLivePhoto
 {
     /**
-     * @param string $type Type of the paid media, always “live_photo”
+     * @var string $type Type of the paid media, always “live_photo”
+     */
+    private string $type = 'live_photo';
+
+    /**
      * @param LivePhoto $livePhoto The photo
     */
     public function __construct
     (
-         private string $type,
          private LivePhoto $livePhoto
     ) {}
     

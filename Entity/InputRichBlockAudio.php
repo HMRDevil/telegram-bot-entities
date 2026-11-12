@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockAudio
 {
     /**
-     * @param string $type Type of the block, always “audio”
+     * @var string $type Type of the block, always “audio”
+     */
+    private string $type = 'audio';
+
+    /**
      * @param InputMediaAudio $audio The audio. Caption is ignored.
      * @param RichBlockCaption|null $caption Optional. Caption of the block
     */
     public function __construct
     (
-         private string $type,
          private InputMediaAudio $audio,
          private ?RichBlockCaption $caption = null
     ) {}

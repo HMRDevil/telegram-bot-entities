@@ -12,14 +12,17 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockDetails
 {
     /**
-     * @param string $type Type of the block, always “details”
+     * @var string $type Type of the block, always “details”
+     */
+    private string $type = 'details';
+
+    /**
      * @param RichText $summary Always shown summary of the block
      * @param InputRichBlock[] $blocks Content of the block
      * @param true|null $isOpen Optional. Pass True if the content of the block is visible by default
     */
     public function __construct
     (
-         private string $type,
          private RichText $summary,
          private array $blocks,
          private ?true $isOpen = null

@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockPhoto
 {
     /**
-     * @param string $type Type of the block, always “photo”
+     * @var string $type Type of the block, always “photo”
+     */
+    private string $type = 'photo';
+
+    /**
      * @param InputMediaPhoto $photo The photo. Caption is ignored.
      * @param RichBlockCaption|null $caption Optional. Caption of the block
     */
     public function __construct
     (
-         private string $type,
          private InputMediaPhoto $photo,
          private ?RichBlockCaption $caption = null
     ) {}

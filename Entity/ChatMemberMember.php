@@ -12,14 +12,17 @@ namespace Phppride\TelegramBot\Entity;
 final class ChatMemberMember
 {
     /**
-     * @param string $status The member's status in the chat, always “member”
+     * @var string $status The member's status in the chat, always “member”
+     */
+    private string $status = 'member';
+
+    /**
      * @param User $user Information about the user
      * @param string|null $tag Optional. Tag of the member
      * @param int|null $untilDate Optional. Date when the user's subscription will expire; Unix time
     */
     public function __construct
     (
-         private string $status,
          private User $user,
          private ?string $tag = null,
          private ?int $untilDate = null

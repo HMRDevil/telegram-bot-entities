@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class BackgroundTypeFill
 {
     /**
-     * @param string $type Type of the background, always “fill”
+     * @var string $type Type of the background, always “fill”
+     */
+    private string $type = 'fill';
+
+    /**
      * @param BackgroundFill $fill The background fill
      * @param int $darkThemeDimming Dimming of the background in dark themes, as a percentage; 0-100
     */
     public function __construct
     (
-         private string $type,
          private BackgroundFill $fill,
          private int $darkThemeDimming
     ) {}

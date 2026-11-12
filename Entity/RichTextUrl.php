@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextUrl
 {
     /**
-     * @param string $type Type of the rich text, always “url”
+     * @var string $type Type of the rich text, always “url”
+     */
+    private string $type = 'url';
+
+    /**
      * @param RichText $text The text
      * @param string $url URL of the link
     */
     public function __construct
     (
-         private string $type,
          private RichText $text,
          private string $url
     ) {}

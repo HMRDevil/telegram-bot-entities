@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class StoryAreaTypeLink
 {
     /**
-     * @param string $type Type of the area, always “link”
+     * @var string $type Type of the area, always “link”
+     */
+    private string $type = 'link';
+
+    /**
      * @param string $url HTTP or tg:// URL to be opened when the area is clicked
     */
     public function __construct
     (
-         private string $type,
          private string $url
     ) {}
     

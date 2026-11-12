@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class ChatMemberLeft
 {
     /**
-     * @param string $status The member's status in the chat, always “left”
+     * @var string $status The member's status in the chat, always “left”
+     */
+    private string $status = 'left';
+
+    /**
      * @param User $user Information about the user
     */
     public function __construct
     (
-         private string $status,
          private User $user
     ) {}
     

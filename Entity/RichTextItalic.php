@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextItalic
 {
     /**
-     * @param string $type Type of the rich text, always “italic”
+     * @var string $type Type of the rich text, always “italic”
+     */
+    private string $type = 'italic';
+
+    /**
      * @param RichText $text The text
     */
     public function __construct
     (
-         private string $type,
          private RichText $text
     ) {}
     

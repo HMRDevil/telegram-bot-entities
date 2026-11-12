@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class InlineQueryResultCachedDocument
 {
     /**
-     * @param string $type Type of the result, must be document
+     * @var string $type Type of the result, must be document
+     */
+    private string $type = 'document';
+
+    /**
      * @param string $id Unique identifier for this result, 1-64 bytes
      * @param string $title Title for the result
      * @param string $documentFileId A valid file identifier for the file
@@ -25,7 +29,6 @@ final class InlineQueryResultCachedDocument
     */
     public function __construct
     (
-         private string $type,
          private string $id,
          private string $title,
          private string $documentFileId,

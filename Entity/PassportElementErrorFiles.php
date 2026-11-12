@@ -12,14 +12,17 @@ namespace Phppride\TelegramBot\Entity;
 final class PassportElementErrorFiles
 {
     /**
-     * @param string $source Error source, must be files
+     * @var string $source Error source, must be files
+     */
+    private string $source = 'files';
+
+    /**
      * @param string $type The section of the user's Telegram Passport which has the issue, one of “utility_bill”, “bank_statement”, “rental_agreement”, “passport_registration”, “temporary_registration”
      * @param String[] $fileHashes List of base64-encoded file hashes
      * @param string $message Error message
     */
     public function __construct
     (
-         private string $source,
          private string $type,
          private array $fileHashes,
          private string $message

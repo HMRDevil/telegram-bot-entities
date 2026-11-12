@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockPullQuotation
 {
     /**
-     * @param string $type Type of the block, always “pullquote”
+     * @var string $type Type of the block, always “pullquote”
+     */
+    private string $type = 'pullquote';
+
+    /**
      * @param RichText $text Text of the block
      * @param RichText|null $credit Optional. Credit of the block
     */
     public function __construct
     (
-         private string $type,
          private RichText $text,
          private ?RichText $credit = null
     ) {}

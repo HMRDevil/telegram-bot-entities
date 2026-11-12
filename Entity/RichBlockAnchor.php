@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class RichBlockAnchor
 {
     /**
-     * @param string $type Type of the block, always “anchor”
+     * @var string $type Type of the block, always “anchor”
+     */
+    private string $type = 'anchor';
+
+    /**
      * @param string $name The name of the anchor
     */
     public function __construct
     (
-         private string $type,
          private string $name
     ) {}
     

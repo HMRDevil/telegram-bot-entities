@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class InputMediaLink
 {
     /**
-     * @param string $type Type of the media, must be link
+     * @var string $type Type of the media, must be link
+     */
+    private string $type = 'link';
+
+    /**
      * @param string $url HTTP URL of the link
     */
     public function __construct
     (
-         private string $type,
          private string $url
     ) {}
     

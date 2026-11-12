@@ -12,13 +12,16 @@ namespace Phppride\TelegramBot\Entity;
 final class InputRichBlockVideo
 {
     /**
-     * @param string $type Type of the block, always “video”
+     * @var string $type Type of the block, always “video”
+     */
+    private string $type = 'video';
+
+    /**
      * @param InputMediaVideo $video The video. Caption is ignored.
      * @param RichBlockCaption|null $caption Optional. Caption of the block
     */
     public function __construct
     (
-         private string $type,
          private InputMediaVideo $video,
          private ?RichBlockCaption $caption = null
     ) {}

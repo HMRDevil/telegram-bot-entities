@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class TransactionPartnerTelegramApi
 {
     /**
-     * @param string $type Type of the transaction partner, always “telegram_api”
+     * @var string $type Type of the transaction partner, always “telegram_api”
+     */
+    private string $type = 'telegram_api';
+
+    /**
      * @param int $requestCount The number of successful requests that exceeded regular limits and were therefore billed
     */
     public function __construct
     (
-         private string $type,
          private int $requestCount
     ) {}
     

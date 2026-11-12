@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class ReactionTypeEmoji
 {
     /**
-     * @param string $type Type of the reaction, always “emoji”
+     * @var string $type Type of the reaction, always “emoji”
+     */
+    private string $type = 'emoji';
+
+    /**
      * @param string $emoji Reaction emoji. Currently, it can be one of "❤", "👍", "👎", "🔥", "🥰", "👏", "😁", "🤔", "🤯", "😱", "🤬", "😢", "🎉", "🤩", "🤮", "💩", "🙏", "👌", "🕊", "🤡", "🥱", "🥴", "😍", "🐳", "❤‍🔥", "🌚", "🌭", "💯", "🤣", "⚡", "🍌", "🏆", "💔", "🤨", "😐", "🍓", "🍾", "💋", "🖕", "😈", "😴", "😭", "🤓", "👻", "👨‍💻", "👀", "🎃", "🙈", "😇", "😨", "🤝", "✍", "🤗", "🫡", "🎅", "🎄", "☃", "💅", "🤪", "🗿", "🆒", "💘", "🙉", "🦄", "😘", "💊", "🙊", "😎", "👾", "🤷‍♂", "🤷", "🤷‍♀", "😡".
     */
     public function __construct
     (
-         private string $type,
          private string $emoji
     ) {}
     

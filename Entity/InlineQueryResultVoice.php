@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class InlineQueryResultVoice
 {
     /**
-     * @param string $type Type of the result, must be voice
+     * @var string $type Type of the result, must be voice
+     */
+    private string $type = 'voice';
+
+    /**
      * @param string $id Unique identifier for this result, 1-64 bytes
      * @param string $voiceUrl A valid URL for the voice recording
      * @param string $title Recording title
@@ -25,7 +29,6 @@ final class InlineQueryResultVoice
     */
     public function __construct
     (
-         private string $type,
          private string $id,
          private string $voiceUrl,
          private string $title,

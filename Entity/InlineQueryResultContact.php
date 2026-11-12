@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class InlineQueryResultContact
 {
     /**
-     * @param string $type Type of the result, must be contact
+     * @var string $type Type of the result, must be contact
+     */
+    private string $type = 'contact';
+
+    /**
      * @param string $id Unique identifier for this result, 1-64 Bytes
      * @param string $phoneNumber Contact's phone number
      * @param string $firstName Contact's first name
@@ -26,7 +30,6 @@ final class InlineQueryResultContact
     */
     public function __construct
     (
-         private string $type,
          private string $id,
          private string $phoneNumber,
          private string $firstName,

@@ -12,7 +12,11 @@ namespace Phppride\TelegramBot\Entity;
 final class InlineQueryResultCachedVoice
 {
     /**
-     * @param string $type Type of the result, must be voice
+     * @var string $type Type of the result, must be voice
+     */
+    private string $type = 'voice';
+
+    /**
      * @param string $id Unique identifier for this result, 1-64 bytes
      * @param string $voiceFileId A valid file identifier for the voice message
      * @param string $title Voice message title
@@ -24,7 +28,6 @@ final class InlineQueryResultCachedVoice
     */
     public function __construct
     (
-         private string $type,
          private string $id,
          private string $voiceFileId,
          private string $title,

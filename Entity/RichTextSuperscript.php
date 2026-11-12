@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class RichTextSuperscript
 {
     /**
-     * @param string $type Type of the rich text, always “superscript”
+     * @var string $type Type of the rich text, always “superscript”
+     */
+    private string $type = 'superscript';
+
+    /**
      * @param RichText $text The text
     */
     public function __construct
     (
-         private string $type,
          private RichText $text
     ) {}
     

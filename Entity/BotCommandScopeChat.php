@@ -12,12 +12,15 @@ namespace Phppride\TelegramBot\Entity;
 final class BotCommandScopeChat
 {
     /**
-     * @param string $type Scope type, must be chat
+     * @var string $type Scope type, must be chat
+     */
+    private string $type = 'chat';
+
+    /**
      * @param int|string $chatId Unique identifier for the target chat or username of the target supergroup in the format @username. Channel direct messages chats and channel chats aren't supported.
     */
     public function __construct
     (
-         private string $type,
          private int|string $chatId
     ) {}
     
