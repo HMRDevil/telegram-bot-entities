@@ -13,12 +13,12 @@ final class InputRichMessageMedia
 {
     /**
      * @param string $id Unique identifier of the media used in a tg://photo?id=, tg://video?id=, tg://document?id=, or tg://audio?id= link. 1-64 characters, only A-Z, a-z, 0-9, _ and - are allowed.
-     * @param  $media The media to be sent. Everything except the media itself and its properties is ignored.
+     * @param InputMediaAnimation|InputMediaAudio|InputMediaDocument|InputMediaPhoto|InputMediaVideo|InputMediaVoiceNote $media The media to be sent. Everything except the media itself and its properties is ignored.
     */
     public function __construct
     (
          private string $id,
-         private  $media
+         private InputMediaAnimation|InputMediaAudio|InputMediaDocument|InputMediaPhoto|InputMediaVideo|InputMediaVoiceNote $media
     ) {}
     
     /**
@@ -30,9 +30,9 @@ final class InputRichMessageMedia
     }
 
     /**
-     * @return 
+     * @return InputMediaAnimation|InputMediaAudio|InputMediaDocument|InputMediaPhoto|InputMediaVideo|InputMediaVoiceNote
      */
-    public function getMedia(): 
+    public function getMedia(): InputMediaAnimation|InputMediaAudio|InputMediaDocument|InputMediaPhoto|InputMediaVideo|InputMediaVoiceNote
     {
         return $this->media;
     }
